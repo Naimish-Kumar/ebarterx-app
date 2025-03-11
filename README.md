@@ -1,4 +1,4 @@
-# eClassify
+# ebarterx
 
 //to run the application
 ```shell
