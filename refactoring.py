@@ -53,5 +53,5 @@ def refactor_custom_text(directory):
                     print(f"No changes made to {file_path}")
 
 # Set the directory containing your Dart project
-dart_project_dir = "/Users/vanshimehta/Documents/Hetvi/tasks/eClassify/lib/ui/screens/blogs"
+dart_project_dir = "/Users/vanshimehta/Documents/Hetvi/tasks/eBarterx/lib/ui/screens/blogs"
 refactor_custom_text(dart_project_dir)

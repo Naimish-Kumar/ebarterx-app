@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:eClassify/ui/theme/theme.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 // import 'package:image_cropper/image_cropper.dart';
 
-import 'package:eClassify/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
 
 //This will open image crop SDK
 class CropImage {

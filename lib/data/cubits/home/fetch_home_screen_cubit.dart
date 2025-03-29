@@ -1,5 +1,5 @@
-import 'package:eClassify/data/model/home/home_screen_section.dart';
-import 'package:eClassify/data/repositories/home/home_repository.dart';
+import 'package:eBarterx/data/model/home/home_screen_section.dart';
+import 'package:eBarterx/data/repositories/home/home_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FetchHomeScreenState {}

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
 import 'package:flutter/material.dart';
 
 class Validator {
@@ -24,9 +24,8 @@ class Validator {
 
   static String? emptyValueValidation(String? value,
       {String? errmsg, required BuildContext context}) {
-
     errmsg ??= 'pleaseEnterSomeText'.translate(context);
-    
+
     return (value ?? "").trim().isEmpty ? errmsg : null;
   }
 

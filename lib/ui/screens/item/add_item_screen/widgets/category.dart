@@ -1,7 +1,7 @@
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {

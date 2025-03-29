@@ -1,4 +1,4 @@
-import 'package:eClassify/ui/theme/theme.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 enum AppTheme { dark, light }

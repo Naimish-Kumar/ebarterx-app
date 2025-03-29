@@ -1,7 +1,7 @@
-import 'package:eClassify/ui/screens/widgets/video_view_screen.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/ui/screens/widgets/video_view_screen.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 
 class AllGalleryImages extends StatelessWidget {

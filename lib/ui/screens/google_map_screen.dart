@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:eClassify/data/model/item/item_model.dart';
-import 'package:eClassify/settings.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/app_icon.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/data/model/item/item_model.dart';
+import 'package:eBarterx/settings.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/app_icon.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/foundation.dart' as f;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -61,11 +61,8 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
         return;
       },
       child: Scaffold(
-
-
         body: Stack(
           children: [
-
             Builder(builder: (context) {
               if (!isGoogleMapVisible) {
                 return Center(child: UiUtils.progress());

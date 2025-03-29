@@ -1,21 +1,21 @@
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/cubits/seller/fetch_seller_verification_field.dart';
-import 'package:eClassify/data/cubits/seller/fetch_verification_request_cubit.dart';
-import 'package:eClassify/data/cubits/seller/send_verification_field_cubit.dart';
-import 'package:eClassify/data/helper/widgets.dart';
-import 'package:eClassify/data/model/verification_request_model.dart';
-import 'package:eClassify/ui/screens/home/home_screen.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/custom_filed_structure/custom_field.dart';
-import 'package:eClassify/ui/screens/widgets/animated_routes/blur_page_route.dart';
-import 'package:eClassify/ui/screens/widgets/custom_text_form_field.dart';
-import 'package:eClassify/ui/screens/widgets/dynamic_field.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/cloud_state/cloud_state.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/hive_utils.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/cubits/seller/fetch_seller_verification_field.dart';
+import 'package:eBarterx/data/cubits/seller/fetch_verification_request_cubit.dart';
+import 'package:eBarterx/data/cubits/seller/send_verification_field_cubit.dart';
+import 'package:eBarterx/data/helper/widgets.dart';
+import 'package:eBarterx/data/model/verification_request_model.dart';
+import 'package:eBarterx/ui/screens/home/home_screen.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/custom_filed_structure/custom_field.dart';
+import 'package:eBarterx/ui/screens/widgets/animated_routes/blur_page_route.dart';
+import 'package:eBarterx/ui/screens/widgets/custom_text_form_field.dart';
+import 'package:eBarterx/ui/screens/widgets/dynamic_field.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/cloud_state/cloud_state.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -131,12 +131,8 @@ class _SellerVerificationScreenState
     );
   }
 
-
-
   Map<String, dynamic> convertToCustomFields(Map<dynamic, dynamic> fieldsData) {
     return fieldsData.map((key, value) {
-
-
       return MapEntry('verification_field[$key]', value.join(', '));
     })
       ..removeWhere((key, value) => value == null); // Remove null entries

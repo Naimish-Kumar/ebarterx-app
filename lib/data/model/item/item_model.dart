@@ -1,6 +1,6 @@
-import 'package:eClassify/data/model/category_model.dart';
-import 'package:eClassify/data/model/custom_field/custom_field_model.dart';
-import 'package:eClassify/data/model/seller_ratings_model.dart';
+import 'package:eBarterx/data/model/category_model.dart';
+import 'package:eBarterx/data/model/custom_field/custom_field_model.dart';
+import 'package:eBarterx/data/model/seller_ratings_model.dart';
 
 class ItemModel {
   int? id;
@@ -198,7 +198,6 @@ class ItemModel {
       areaId = json['area']['id'];
       area = json['area']['name'];
     }
-
 
     if (json['price'] is int) {
       price = (json['price'] as int).toDouble();

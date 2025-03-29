@@ -1,8 +1,6 @@
-
-
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/repositories/chat_repository.dart';
-import 'package:eClassify/ui/screens/chat/chat_audio/widgets/chat_widget.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/repositories/chat_repository.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/widgets/chat_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoadChatMessagesState {}

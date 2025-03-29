@@ -2,13 +2,13 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:eClassify/ui/screens/chat/chat_audio/audio_state.dart';
-import 'package:eClassify/ui/screens/chat/chat_audio/globals.dart';
-import 'package:eClassify/ui/screens/chat/chat_audio/widgets/flow_shader.dart';
-import 'package:eClassify/ui/screens/chat/chat_audio/widgets/lottie_animation.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/audio_state.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/globals.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/widgets/flow_shader.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/widgets/lottie_animation.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
@@ -226,7 +226,6 @@ class _RecordButtonState extends State<RecordButton> {
                     size: 18,
                     color: Colors.green,
                   ),
-
                 ),
               ],
             ),
@@ -281,7 +280,7 @@ class _RecordButtonState extends State<RecordButton> {
         if (isCancelled(details.localPosition, context)) {
           // if (await Vibrate.canVibrate) Vibrate.feedback(FeedbackType.heavy);
           Vibration.vibrate();
-                  timer?.cancel();
+          timer?.cancel();
           timer = null;
           //startTime = null;
           recordDuration = "00:00";
@@ -303,7 +302,7 @@ class _RecordButtonState extends State<RecordButton> {
 
           //if (await Vibrate.canVibrate) Vibrate.feedback(FeedbackType.heavy);
           Vibration.vibrate();
-                  debugPrint(details.localPosition.dy.toString());
+          debugPrint(details.localPosition.dy.toString());
           setState(() {
             isLocked = true;
           });
@@ -320,7 +319,7 @@ class _RecordButtonState extends State<RecordButton> {
       onLongPress: () async {
         if (widget.isSending) return;
         Vibration.vibrate();
-              await startRecording();
+        await startRecording();
       },
     );
   }
@@ -337,8 +336,6 @@ class _RecordButtonState extends State<RecordButton> {
 
   Future<void> startRecording() async {
     if (await record.hasPermission()) {
-
-
       try {
         String filePath = await getApplicationDocumentsDirectory()
             .then((value) => '${value.path}/${_generateRandomId()}.wav');
@@ -371,7 +368,7 @@ class _RecordButtonState extends State<RecordButton> {
 
   Future<void> saveFile() async {
     Vibration.vibrate();
-      timer?.cancel();
+    timer?.cancel();
     timer = null;
     startTime = null;
     recordDuration = "00:00";

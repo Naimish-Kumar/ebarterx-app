@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/item/item_model.dart';
-import 'package:eClassify/data/model/item_filter_model.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/item/item_model.dart';
+import 'package:eBarterx/data/model/item_filter_model.dart';
+import 'package:eBarterx/utils/api.dart';
 import 'package:path/path.dart' as path;
 
 class ItemRepository {
@@ -17,13 +17,11 @@ class ItemRepository {
       Map<String, dynamic> parameters = {};
       parameters.addAll(itemDetails);
 
-
       MultipartFile image = await MultipartFile.fromFile(mainImage.path,
           filename: path.basename(mainImage.path));
 
       if (otherImages != null && otherImages.isNotEmpty) {
         List<Future<MultipartFile>> futures = otherImages.map((imageFile) {
-
           return MultipartFile.fromFile(imageFile.path,
               filename: path.basename(imageFile.path));
         }).toList();
@@ -174,7 +172,6 @@ class ItemRepository {
         parameters.remove('country');
         parameters.remove('state');
       } else {
-
         if (city != null && city != "") parameters['city'] = city;
         if (areaId != null) parameters['area_id'] = areaId;
         if (country != null && country != "") parameters['country'] = country;
@@ -186,7 +183,6 @@ class ItemRepository {
       }
 
       parameters.remove('area');
-
 
       if (filter.customFields != null) {
         filter.customFields!.forEach((key, value) {
@@ -216,7 +212,6 @@ class ItemRepository {
 
     return DataOutput(total: response['data']['total'] ?? 0, modelList: items);
   }
-
 
   Future<DataOutput<ItemModel>> fetchPopularItems(
       {required String sortBy, required int page}) async {

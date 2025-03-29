@@ -1,4 +1,4 @@
-import 'package:eClassify/app/app_localization.dart';
+import 'package:eBarterx/app/app_localization.dart';
 import 'package:flutter/cupertino.dart';
 
 extension TranslateString on String {

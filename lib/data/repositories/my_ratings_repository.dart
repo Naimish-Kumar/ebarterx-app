@@ -1,6 +1,6 @@
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/my_review_model.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/my_review_model.dart';
 
 class MyRatingsRepository {
   Future<DataOutput<MyReviewModel>> fetchMyRatingsAllRatings(
@@ -31,7 +31,6 @@ class MyRatingsRepository {
         ),
       );
     } catch (error) {
-
       rethrow;
     }
   }

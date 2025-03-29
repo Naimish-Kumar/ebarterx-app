@@ -1,9 +1,9 @@
-import 'package:eClassify/app/app_theme.dart';
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/model/user_model.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/hive_keys.dart';
+import 'package:eBarterx/app/app_theme.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/model/user_model.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/hive_keys.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
 
@@ -148,7 +148,6 @@ class HiveUtils {
     Hive.box(HiveKeys.authBox).put(HiveKeys.isAuthenticated, value);
   }
 
-
   static Future<void> setUserIsNotNew() {
     return Hive.box(HiveKeys.authBox).put(HiveKeys.isUserFirstTime, false);
   }
@@ -251,7 +250,6 @@ class HiveUtils {
 
   @visibleForTesting
   static Future<void> setUserIsNew() {
-
     Hive.box(HiveKeys.authBox).put(HiveKeys.isAuthenticated, false);
     return Hive.box(HiveKeys.authBox).put(HiveKeys.isUserFirstTime, true);
   }

@@ -2,8 +2,8 @@
 
 import 'dart:developer';
 
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/utils/constant.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/utils/constant.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FetchLanguageState {}

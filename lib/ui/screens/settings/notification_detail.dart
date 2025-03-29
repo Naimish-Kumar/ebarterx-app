@@ -1,9 +1,9 @@
-import 'package:eClassify/data/helper/designs.dart';
-import 'package:eClassify/ui/screens/settings/notifications.dart';
-import 'package:eClassify/ui/screens/widgets/animated_routes/blur_page_route.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/data/helper/designs.dart';
+import 'package:eBarterx/ui/screens/settings/notifications.dart';
+import 'package:eBarterx/ui/screens/widgets/animated_routes/blur_page_route.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 
 class NotificationDetail extends StatefulWidget {

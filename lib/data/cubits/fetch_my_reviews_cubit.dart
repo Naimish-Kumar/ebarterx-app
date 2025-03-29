@@ -1,6 +1,6 @@
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/my_review_model.dart';
-import 'package:eClassify/data/repositories/my_ratings_repository.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/my_review_model.dart';
+import 'package:eBarterx/data/repositories/my_ratings_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FetchMyRatingsState {}
@@ -142,7 +142,6 @@ class FetchMyRatingsCubit extends Cubit<FetchMyRatingsState> {
       int indexToUpdate =
           ratings.indexWhere((element) => element.id == itemReportId);
       if (indexToUpdate != -1) {
-
         ratings[indexToUpdate].reportStatus = 'reported';
         ratings[indexToUpdate].reportReason = reportReason;
 

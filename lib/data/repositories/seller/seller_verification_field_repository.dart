@@ -1,6 +1,6 @@
-import 'package:eClassify/data/model/custom_field/custom_field_model.dart';
-import 'package:eClassify/data/model/verification_request_model.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/custom_field/custom_field_model.dart';
+import 'package:eBarterx/data/model/verification_request_model.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class SellerVerificationFieldRepository {
   Future<List<VerificationFieldModel>> getSellerVerificationFields() async {

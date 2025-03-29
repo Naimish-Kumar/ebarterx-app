@@ -1,27 +1,26 @@
 import 'dart:io';
 
 import 'package:country_picker/country_picker.dart';
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/cubits/auth/auth_cubit.dart';
-import 'package:eClassify/data/cubits/auth/authentication_cubit.dart';
-import 'package:eClassify/data/cubits/slider_cubit.dart';
-import 'package:eClassify/data/cubits/system/user_details.dart';
-import 'package:eClassify/data/model/user_model.dart';
-import 'package:eClassify/ui/screens/widgets/animated_routes/blur_page_route.dart';
-import 'package:eClassify/ui/screens/widgets/custom_text_form_field.dart';
-import 'package:eClassify/ui/screens/widgets/image_cropper.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/app_icon.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/hive_utils.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/cubits/auth/auth_cubit.dart';
+import 'package:eBarterx/data/cubits/auth/authentication_cubit.dart';
+import 'package:eBarterx/data/cubits/slider_cubit.dart';
+import 'package:eBarterx/data/cubits/system/user_details.dart';
+import 'package:eBarterx/data/model/user_model.dart';
+import 'package:eBarterx/ui/screens/widgets/animated_routes/blur_page_route.dart';
+import 'package:eBarterx/ui/screens/widgets/custom_text_form_field.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/app_icon.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:image_cropper/image_cropper.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:image_picker/image_picker.dart';
 
 class UserProfileScreen extends StatefulWidget {
@@ -56,10 +55,10 @@ class UserProfileScreen extends StatefulWidget {
 
 class UserProfileScreenState extends State<UserProfileScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  late final TextEditingController phoneController = TextEditingController();
-  late final TextEditingController nameController = TextEditingController();
-  late final TextEditingController emailController = TextEditingController();
-  final TextEditingController addressController = TextEditingController();
+  late final phoneController = TextEditingController();
+  late final nameController = TextEditingController();
+  late final emailController = TextEditingController();
+  final addressController = TextEditingController();
   dynamic size;
   dynamic city, _state, country;
   double? latitude, longitude;
@@ -73,6 +72,7 @@ class UserProfileScreenState extends State<UserProfileScreen> {
   @override
   void initState() {
     super.initState();
+    isLoading = false;
 
     city = HiveUtils.getCityName();
     _state = HiveUtils.getStateName();
@@ -544,72 +544,58 @@ class UserProfileScreenState extends State<UserProfileScreen> {
   }
 
   void profileUpdateProcess() async {
+    if (isLoading == true) return;
+
     setState(() {
       isLoading = true;
     });
+
     try {
-      var response = await context.read<AuthCubit>().updateuserdata(context,
-          name: nameController.text.trim(),
-          email: emailController.text.trim(),
-          fileUserimg: fileUserimg,
-          address: addressController.text,
-          mobile: phoneController.text,
-          notification: isNotificationsEnabled == true ? "1" : "0",
-          countryCode: countryCode,
-          personalDetail: isPersonalDetailShow == true ? 1 : 0);
-
-      Future.delayed(
-        Duration.zero,
-        () {
-          context
-              .read<UserDetailsCubit>()
-              .copy(UserModel.fromJson(response['data']));
-        },
-      );
-
-      Future.delayed(
-        Duration.zero,
-        () {
-          setState(() {
-            isLoading = false;
-          });
-          HelperUtils.showSnackBarMessage(
+      var response = await context.read<AuthCubit>().updateuserdata(
             context,
-            response['message'],
+            name: nameController.text.trim(),
+            email: emailController.text.trim(),
+            fileUserimg: fileUserimg,
+            address: addressController.text,
+            mobile: phoneController.text,
+            notification: isNotificationsEnabled ? "1" : "0",
+            countryCode: countryCode,
+            personalDetail: isPersonalDetailShow ? 1 : 0,
           );
-          if (widget.from != "login") {
-            Navigator.pop(context);
-          }
-        },
-      );
 
-      if (widget.from == "login" && widget.popToCurrent != true) {
-        Future.delayed(
-          Duration.zero,
-          () {
-            if (HiveUtils.getCityName() != null &&
-                HiveUtils.getCityName() != "") {
-              HelperUtils.killPreviousPages(
-                  context, Routes.main, {"from": widget.from});
-            } else {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                  Routes.locationPermissionScreen, (route) => false);
-            }
-          },
-        );
-      } else if (widget.from == "login" && widget.popToCurrent == true) {
-        Future.delayed(Duration.zero, () {
+      if (response['status'] == true) {
+        context
+            .read<UserDetailsCubit>()
+            .copy(UserModel.fromJson(response['data']));
+
+        HelperUtils.showSnackBarMessage(
+            context, response['message'] ?? "Profile updated successfully");
+
+        if (widget.from != "login") {
+          Navigator.pop(context);
+        } else if (widget.popToCurrent != true) {
+          if (HiveUtils.getCityName() != null &&
+              HiveUtils.getCityName() != "") {
+            HelperUtils.killPreviousPages(
+                context, Routes.main, {"from": widget.from});
+          } else {
+            Navigator.of(context).pushNamedAndRemoveUntil(
+                Routes.locationPermissionScreen, (route) => false);
+          }
+        } else if (widget.popToCurrent == true) {
           Navigator.of(context)
             ..pop()
             ..pop();
-        });
+        }
+      } else {
+        HelperUtils.showSnackBarMessage(
+            context, response['message'] ?? "Failed to update profile");
       }
     } catch (e) {
-      Future.delayed(Duration.zero, () {
-        setState(() {
-          isLoading = false;
-        });
-        HelperUtils.showSnackBarMessage(context, e.toString());
+      HelperUtils.showSnackBarMessage(context, "Error: ${e.toString()}");
+    } finally {
+      setState(() {
+        isLoading = false;
       });
     }
   }
@@ -657,24 +643,37 @@ class UserProfileScreenState extends State<UserProfileScreen> {
   }
 
   void _imgFromGallery(ImageSource imageSource) async {
-    CropImage.init(context);
+    try {
+      final pickedFile = await ImagePicker().pickImage(source: imageSource);
+      if (pickedFile != null) {
+        final file = File(pickedFile.path);
+        final sizeInBytes = await file.length();
+        final sizeInMb = sizeInBytes / (1024 * 1024);
 
-    final pickedFile = await ImagePicker().pickImage(source: imageSource);
+        if (sizeInMb > 5) {
+          HelperUtils.showSnackBarMessage(
+              context, "Image size should be less than 5MB");
+          return;
+        }
 
-    if (pickedFile != null) {
-     
-     final croppedFile = await CropImage.crop(
-        filePath: pickedFile.path,
-      );
-      if (croppedFile == null) {
-        fileUserimg = null;
-      } else {
-        fileUserimg = File(croppedFile.path);
+        fileUserimg = File(pickedFile.path);
       }
-    } else {
+    } catch (e) {
+      HelperUtils.showSnackBarMessage(
+          context, "Failed to pick image: ${e.toString()}");
       fileUserimg = null;
+    } finally {
+      setState(() {});
     }
-    setState(() {});
+  }
+
+  Future<File> compressImage(File file) async {
+    final result = await FlutterImageCompress.compressAndGetFile(
+      file.path,
+      file.path,
+      quality: 70,
+    );
+    return File(result!.path);
   }
 
   void showCountryCode() {

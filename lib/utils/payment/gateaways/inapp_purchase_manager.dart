@@ -1,15 +1,13 @@
-
-
 import 'dart:async';
 
-import 'package:eClassify/data/cubits/subscription/in_app_purchase_cubit.dart';
-import 'package:eClassify/ui/screens/widgets/blurred_dialog_box.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/data/cubits/subscription/in_app_purchase_cubit.dart';
+import 'package:eBarterx/ui/screens/widgets/blurred_dialog_box.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
@@ -113,7 +111,6 @@ class InAppPurchaseManager {
               } else if (inAppPurchaseEvent.status == PurchaseStatus.error) {
                 onErrorPurchase(context, inAppPurchaseEvent);
               }
-
 
               if (inAppPurchaseEvent.pendingCompletePurchase) {
                 await _inAppPurchase.completePurchase(inAppPurchaseEvent);

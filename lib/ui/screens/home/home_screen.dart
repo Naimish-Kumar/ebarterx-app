@@ -2,41 +2,41 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:eClassify/data/cubits/category/fetch_category_cubit.dart';
-import 'package:eClassify/data/cubits/chat/blocked_users_list_cubit.dart';
-import 'package:eClassify/data/cubits/chat/get_buyer_chat_users_cubit.dart';
-import 'package:eClassify/data/cubits/favorite/favorite_cubit.dart';
-import 'package:eClassify/data/cubits/home/fetch_home_all_items_cubit.dart';
-import 'package:eClassify/data/cubits/home/fetch_home_screen_cubit.dart';
-import 'package:eClassify/data/cubits/slider_cubit.dart';
-import 'package:eClassify/data/cubits/system/fetch_system_settings_cubit.dart';
-import 'package:eClassify/data/cubits/system/get_api_keys_cubit.dart';
-import 'package:eClassify/data/helper/designs.dart';
-import 'package:eClassify/data/model/home/home_screen_section.dart';
-import 'package:eClassify/data/model/item/item_model.dart';
-import 'package:eClassify/data/model/system_settings_model.dart';
-import 'package:eClassify/ui/screens/ad_banner_screen.dart';
-import 'package:eClassify/ui/screens/home/slider_widget.dart';
-import 'package:eClassify/ui/screens/home/widgets/category_widget_home.dart';
-import 'package:eClassify/ui/screens/home/widgets/grid_list_adapter.dart';
-import 'package:eClassify/ui/screens/home/widgets/home_search.dart';
-import 'package:eClassify/ui/screens/home/widgets/home_sections_adapter.dart';
-import 'package:eClassify/ui/screens/home/widgets/home_shimmers.dart';
-import 'package:eClassify/ui/screens/home/widgets/location_widget.dart';
-import 'package:eClassify/ui/screens/native_ads_screen.dart';
-import 'package:eClassify/ui/screens/widgets/errors/no_internet.dart';
-import 'package:eClassify/ui/screens/widgets/errors/something_went_wrong.dart';
-import 'package:eClassify/ui/screens/widgets/shimmerLoadingContainer.dart';
-import 'package:eClassify/ui/theme/theme.dart';
+import 'package:eBarterx/data/cubits/category/fetch_category_cubit.dart';
+import 'package:eBarterx/data/cubits/chat/blocked_users_list_cubit.dart';
+import 'package:eBarterx/data/cubits/chat/get_buyer_chat_users_cubit.dart';
+import 'package:eBarterx/data/cubits/favorite/favorite_cubit.dart';
+import 'package:eBarterx/data/cubits/home/fetch_home_all_items_cubit.dart';
+import 'package:eBarterx/data/cubits/home/fetch_home_screen_cubit.dart';
+import 'package:eBarterx/data/cubits/slider_cubit.dart';
+import 'package:eBarterx/data/cubits/system/fetch_system_settings_cubit.dart';
+import 'package:eBarterx/data/cubits/system/get_api_keys_cubit.dart';
+import 'package:eBarterx/data/helper/designs.dart';
+import 'package:eBarterx/data/model/home/home_screen_section.dart';
+import 'package:eBarterx/data/model/item/item_model.dart';
+import 'package:eBarterx/data/model/system_settings_model.dart';
+import 'package:eBarterx/ui/screens/ad_banner_screen.dart';
+import 'package:eBarterx/ui/screens/home/slider_widget.dart';
+import 'package:eBarterx/ui/screens/home/widgets/category_widget_home.dart';
+import 'package:eBarterx/ui/screens/home/widgets/grid_list_adapter.dart';
+import 'package:eBarterx/ui/screens/home/widgets/home_search.dart';
+import 'package:eBarterx/ui/screens/home/widgets/home_sections_adapter.dart';
+import 'package:eBarterx/ui/screens/home/widgets/home_shimmers.dart';
+import 'package:eBarterx/ui/screens/home/widgets/location_widget.dart';
+import 'package:eBarterx/ui/screens/native_ads_screen.dart';
+import 'package:eBarterx/ui/screens/widgets/errors/no_internet.dart';
+import 'package:eBarterx/ui/screens/widgets/errors/something_went_wrong.dart';
+import 'package:eBarterx/ui/screens/widgets/shimmerLoadingContainer.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
 //import 'package:uni_links/uni_links.dart';
 
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/hive_utils.dart';
-import 'package:eClassify/utils/notification/awsome_notification.dart';
-import 'package:eClassify/utils/notification/notification_service.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
+import 'package:eBarterx/utils/notification/awsome_notification.dart';
+import 'package:eBarterx/utils/notification/notification_service.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -326,7 +326,6 @@ class HomeScreenState extends State<HomeScreen>
                   height: 20,
                   width: 150,
                 ),
-
               ],
             ),
             Container(

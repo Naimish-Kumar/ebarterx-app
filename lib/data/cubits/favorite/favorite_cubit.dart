@@ -1,5 +1,5 @@
-import 'package:eClassify/data/model/item/item_model.dart';
-import 'package:eClassify/data/repositories/favourites_repository.dart';
+import 'package:eBarterx/data/model/item/item_model.dart';
+import 'package:eBarterx/data/repositories/favourites_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FavoriteState {}

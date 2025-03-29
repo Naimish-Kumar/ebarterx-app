@@ -1,23 +1,23 @@
 import 'dart:ui' as ui;
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/cubits/seller/fetch_seller_item_cubit.dart';
-import 'package:eClassify/data/cubits/seller/fetch_seller_ratings_cubit.dart';
-import 'package:eClassify/data/model/item/item_model.dart';
-import 'package:eClassify/data/model/seller_ratings_model.dart';
-import 'package:eClassify/ui/screens/home/home_screen.dart';
-import 'package:eClassify/ui/screens/home/widgets/home_sections_adapter.dart';
-import 'package:eClassify/ui/screens/widgets/animated_routes/blur_page_route.dart';
-import 'package:eClassify/ui/screens/widgets/errors/no_data_found.dart';
-import 'package:eClassify/ui/screens/widgets/shimmerLoadingContainer.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/app_icon.dart';
-import 'package:eClassify/utils/custom_hero_animation.dart';
-import 'package:eClassify/utils/custom_silver_grid_delegate.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/cubits/seller/fetch_seller_item_cubit.dart';
+import 'package:eBarterx/data/cubits/seller/fetch_seller_ratings_cubit.dart';
+import 'package:eBarterx/data/model/item/item_model.dart';
+import 'package:eBarterx/data/model/seller_ratings_model.dart';
+import 'package:eBarterx/ui/screens/home/home_screen.dart';
+import 'package:eBarterx/ui/screens/home/widgets/home_sections_adapter.dart';
+import 'package:eBarterx/ui/screens/widgets/animated_routes/blur_page_route.dart';
+import 'package:eBarterx/ui/screens/widgets/errors/no_data_found.dart';
+import 'package:eBarterx/ui/screens/widgets/shimmerLoadingContainer.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/app_icon.dart';
+import 'package:eBarterx/utils/custom_hero_animation.dart';
+import 'package:eBarterx/utils/custom_silver_grid_delegate.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -735,7 +735,7 @@ class SellerProfileScreenState extends State<SellerProfileScreen>
                           ),
                           fontSize: context.font.small,
                           color: context.color.textDefaultColor.withOpacity(
-                             .3,
+                            .3,
                           ),
                         )
                     ],

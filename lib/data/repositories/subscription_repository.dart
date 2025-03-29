@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/subscription_package_model.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/subscription_package_model.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class SubscriptionRepository {
   Future<DataOutput<SubscriptionPackageModel>> getSubscriptionPacakges(
@@ -32,7 +32,6 @@ class SubscriptionRepository {
         Api.packageId: packageId,
         if (isPackageAvailable) 'flag': 1,
       };
-
 
       await Api.post(url: Api.userPurchasePackageApi, parameter: parameters);
     } catch (e) {

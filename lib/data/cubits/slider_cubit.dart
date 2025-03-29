@@ -1,11 +1,10 @@
-
 import 'dart:convert';
 
-import 'package:eClassify/data/helper/custom_exception.dart';
-import 'package:eClassify/data/model/home_slider.dart';
-import 'package:eClassify/settings.dart';
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/utils/network/network_availability.dart';
+import 'package:eBarterx/data/helper/custom_exception.dart';
+import 'package:eBarterx/data/model/home_slider.dart';
+import 'package:eBarterx/settings.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/utils/network/network_availability.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -47,8 +46,7 @@ class SliderFetchSuccess extends SliderState {
 class SliderFetchFailure extends SliderState {
   final String errorMessage;
   final bool isUserDeactivated;
-  SliderFetchFailure(
-      this.errorMessage, this.isUserDeactivated);
+  SliderFetchFailure(this.errorMessage, this.isUserDeactivated);
 }
 
 class SliderCubit extends Cubit<SliderState> {
@@ -77,7 +75,6 @@ class SliderCubit extends Cubit<SliderState> {
         bool isUserActive = true;
         if (e.toString() ==
             "your account has been deactivate! please contact admin") {
-
           isUserActive = false;
         } else {
           isUserActive = true;

@@ -1,8 +1,8 @@
-import 'package:eClassify/data/model/personalized/personalized_settings.dart';
-import 'package:eClassify/firebase_options.dart';
-import 'package:eClassify/main.dart';
-import 'package:eClassify/ui/screens/widgets/errors/something_went_wrong.dart';
-import 'package:eClassify/utils/hive_keys.dart';
+import 'package:eBarterx/data/model/personalized/personalized_settings.dart';
+import 'package:eBarterx/firebase_options.dart';
+import 'package:eBarterx/main.dart';
+import 'package:eBarterx/ui/screens/widgets/errors/something_went_wrong.dart';
+import 'package:eBarterx/utils/hive_keys.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

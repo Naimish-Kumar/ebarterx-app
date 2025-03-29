@@ -3,23 +3,23 @@ import 'dart:math';
 import 'dart:ui' as ui;
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eClassify/app/app_theme.dart';
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/cubits/home/fetch_home_all_items_cubit.dart';
-import 'package:eClassify/data/cubits/home/fetch_home_screen_cubit.dart';
-import 'package:eClassify/data/cubits/system/app_theme_cubit.dart';
-import 'package:eClassify/ui/screens/widgets/animated_routes/blur_page_route.dart';
-import 'package:eClassify/ui/screens/widgets/blurred_dialog_box.dart';
-import 'package:eClassify/ui/screens/widgets/full_screen_image_view.dart';
-import 'package:eClassify/ui/screens/widgets/gallery_view.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/app_icon.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/hive_utils.dart';
-import 'package:eClassify/utils/network_to_localsvg.dart';
+import 'package:eBarterx/app/app_theme.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/cubits/home/fetch_home_all_items_cubit.dart';
+import 'package:eBarterx/data/cubits/home/fetch_home_screen_cubit.dart';
+import 'package:eBarterx/data/cubits/system/app_theme_cubit.dart';
+import 'package:eBarterx/ui/screens/widgets/animated_routes/blur_page_route.dart';
+import 'package:eBarterx/ui/screens/widgets/blurred_dialog_box.dart';
+import 'package:eBarterx/ui/screens/widgets/full_screen_image_view.dart';
+import 'package:eBarterx/ui/screens/widgets/gallery_view.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/app_icon.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
+import 'package:eBarterx/utils/network_to_localsvg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -55,7 +55,7 @@ class UiUtils {
       context: context,
       useSafeArea: true,
       isScrollControlled: false,
-      backgroundColor: context.color.primaryColor.withOpacity( 0.9),
+      backgroundColor: context.color.primaryColor.withOpacity(0.9),
       enableDrag: false,
       builder: (context) {
         return Container(
@@ -148,7 +148,7 @@ class UiUtils {
       placeholderBuilder: (context) {
         return Container(
             width: width,
-            color: context.color.territoryColor.withOpacity( 0.1),
+            color: context.color.territoryColor.withOpacity(0.1),
             height: height,
             alignment: AlignmentDirectional.center,
             child: SizedBox(
@@ -179,7 +179,7 @@ class UiUtils {
       placeholder: (context, url) {
         return Container(
             width: width,
-            color: context.color.territoryColor.withOpacity( 0.1),
+            color: context.color.territoryColor.withOpacity(0.1),
             height: height,
             alignment: AlignmentDirectional.center,
             child: SizedBox(
@@ -194,7 +194,7 @@ class UiUtils {
       errorWidget: (context, url, error) {
         return Container(
           width: width,
-          color: context.color.territoryColor.withOpacity( 0.1),
+          color: context.color.territoryColor.withOpacity(0.1),
           height: height,
           alignment: AlignmentDirectional.center,
           child: SizedBox(
@@ -230,8 +230,6 @@ class UiUtils {
     }
   }
 
-
-
   static SystemUiOverlayStyle getSystemUiOverlayStyle(
       {required BuildContext context, required Color statusBarColor}) {
     return SystemUiOverlayStyle(
@@ -240,7 +238,6 @@ class UiUtils {
             context.watch<AppThemeCubit>().state.appTheme == AppTheme.dark
                 ? Brightness.light
                 : Brightness.dark,
-
         statusBarColor: statusBarColor,
         statusBarBrightness:
             context.watch<AppThemeCubit>().state.appTheme == AppTheme.dark
@@ -376,7 +373,6 @@ class UiUtils {
       ),
     );
   }
-
 
   static Widget buildButton(BuildContext context,
       {double? height,
@@ -624,7 +620,6 @@ extension FormatAmount on String {
         ? "${Constant.currencySymbol}${toString()}"
         : "${toString()}${Constant.currencySymbol}";
   }
-
 
   String formatDate({
     String? format,

@@ -1,4 +1,4 @@
-import 'package:eClassify/utils/constant.dart';
+import 'package:eBarterx/utils/constant.dart';
 import 'package:intl/intl.dart';
 
 extension CurrencyFormatter on double {

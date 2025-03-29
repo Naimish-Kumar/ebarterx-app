@@ -1,24 +1,19 @@
-
-
 import 'dart:convert';
 
-import 'package:eClassify/utils/hive_utils.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class AppLocalization {
   final Locale locale;
 
-
   late Map<String, String> _localizedValues;
 
   AppLocalization(this.locale);
 
-
   static AppLocalization? of(BuildContext context) {
     return Localizations.of(context, AppLocalization);
   }
-
 
   Future loadJson() async {
     String jsonStringValues =
@@ -39,15 +34,12 @@ class AppLocalization {
     return _localizedValues[key!];
   }
 
-
   static const LocalizationsDelegate<AppLocalization> delegate =
       _AppLocalizationDelegate();
 }
 
-
 class _AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
   const _AppLocalizationDelegate();
-
 
   @override
   bool isSupported(Locale locale) {

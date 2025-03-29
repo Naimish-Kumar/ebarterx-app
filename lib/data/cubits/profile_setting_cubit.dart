@@ -1,13 +1,11 @@
-import 'package:eClassify/data/helper/custom_exception.dart';
-import 'package:eClassify/settings.dart';
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/utils/constant.dart';
+import 'package:eBarterx/data/helper/custom_exception.dart';
+import 'package:eBarterx/settings.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class ProfileSettingState {}
-
-
 
 class ProfileSettingInitial extends ProfileSettingState {}
 
@@ -88,7 +86,6 @@ class ProfileSettingCubit extends Cubit<ProfileSettingState> {
       );
 
       if (!response[Api.error]) {
-
         if (title == Api.maintenanceMode) {
           Constant.maintenanceMode = response['data'].toString();
         } else {
@@ -96,17 +93,14 @@ class ProfileSettingCubit extends Cubit<ProfileSettingState> {
 
           if (title == Api.termsAndConditions) {
             profileSettingData = data['terms_conditions'];
-
           }
 
           if (title == Api.privacyPolicy) {
             profileSettingData = data['privacy_policy'];
-
           }
 
           if (title == Api.aboutUs) {
             profileSettingData = data['about_us'];
-
           }
         }
       } else {
@@ -118,5 +112,4 @@ class ProfileSettingCubit extends Cubit<ProfileSettingState> {
       rethrow;
     }
   }
-
 }

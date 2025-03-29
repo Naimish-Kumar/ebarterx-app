@@ -1,13 +1,11 @@
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/transaction_model.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/transaction_model.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class TransactionRepository {
   Future<DataOutput<TransactionModel>> fetchTransactions(
       {required int page}) async {
-    Map<String, dynamic> parameters = {
-
-    };
+    Map<String, dynamic> parameters = {};
 
     Map<String, dynamic> response = await Api.get(
         url: Api.getPaymentDetailsApi, queryParameters: parameters);

@@ -1,4 +1,4 @@
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 
 ///Light Theme Colors

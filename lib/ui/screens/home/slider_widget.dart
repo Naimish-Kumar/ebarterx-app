@@ -1,17 +1,15 @@
-
-
 import 'dart:async';
 
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/cubits/slider_cubit.dart';
-import 'package:eClassify/data/helper/widgets.dart';
-import 'package:eClassify/data/model/category_model.dart';
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/item/item_model.dart';
-import 'package:eClassify/data/repositories/item/item_repository.dart';
-import 'package:eClassify/ui/screens/home/home_screen.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/cubits/slider_cubit.dart';
+import 'package:eBarterx/data/helper/widgets.dart';
+import 'package:eBarterx/data/model/category_model.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/item/item_model.dart';
+import 'package:eBarterx/data/repositories/item/item_repository.dart';
+import 'package:eBarterx/ui/screens/home/home_screen.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart' as urllauncher;

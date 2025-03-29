@@ -1,9 +1,8 @@
-
-import 'package:eClassify/data/model/category_model.dart';
-import 'package:eClassify/data/model/item_filter_model.dart';
-import 'package:eClassify/data/model/system_settings_model.dart';
-import 'package:eClassify/settings.dart';
-import 'package:eClassify/ui/screens/filter_screen.dart';
+import 'package:eBarterx/data/model/category_model.dart';
+import 'package:eBarterx/data/model/item_filter_model.dart';
+import 'package:eBarterx/data/model/system_settings_model.dart';
+import 'package:eBarterx/settings.dart';
+import 'package:eBarterx/ui/screens/filter_screen.dart';
 import 'package:flutter/material.dart';
 
 const String svgPath = 'assets/svg/';
@@ -22,7 +21,6 @@ class Constant {
   static String isGoogleBannerAdsEnabled = "";
   static String isGoogleInterstitialAdsEnabled = "";
   static String isGoogleNativeAdsEnabled = "1";
-
 
   static String bannerAdIdAndroid = '';
   static String bannerAdIdIOS = "";
@@ -59,25 +57,20 @@ class Constant {
 
   static const String defaultCountryCode = AppSettings.defaultCountryCode;
 
-
-
   static const int maxCategoryLength =
       AppSettings.maxCategoryShowLengthInHomeScreen;
-
 
   static const String loadingSuccessLottieFile =
       AppSettings.successLoadingLottieFile;
   static const String successItemLottieFile =
       AppSettings.successCheckLottieFile;
-  static const String progressLottieFileWhite = AppSettings
-      .progressLottieFileWhite;
+  static const String progressLottieFileWhite =
+      AppSettings.progressLottieFileWhite;
 
   static const String maintenanceModeLottieFile =
       AppSettings.maintenanceModeLottieFile;
 
-
-  static const bool useLottieProgress = AppSettings
-      .useLottieProgress;
+  static const bool useLottieProgress = AppSettings.useLottieProgress;
 
   static const String notificationChannel = AppSettings.notificationChannel;
   static int uploadImageQuality = AppSettings.uploadImageQuality;
@@ -149,11 +142,9 @@ class Constant {
     SystemSetting.maxRadius: "max_length",
   };
 
-
   static int minChatMessages = 35;
 
   static bool showExperimentals = true;
-
 
   static bool isUpdateAvailable = false;
   static String newVersionNumber = "";

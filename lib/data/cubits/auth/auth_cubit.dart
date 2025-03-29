@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/utils/hive_utils.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,14 +27,10 @@ class AuthFailure extends AuthState {
 }
 
 class AuthCubit extends Cubit<AuthState> {
-
-  AuthCubit() : super(AuthInitial()) {
-
-  }
+  AuthCubit() : super(AuthInitial()) {}
 
   void checkIsAuthenticated() {
     if (HiveUtils.isUserAuthenticated()) {
-
       emit(Authenticated(true));
     } else {
       emit(Unauthenticated());
@@ -70,7 +66,6 @@ class AuthCubit extends Cubit<AuthState> {
           await Api.post(url: Api.updateProfileApi, parameter: parameters);
       if (!response[Api.error]) {
         HiveUtils.setUserData(response['data']);
-
       }
 
       return response;

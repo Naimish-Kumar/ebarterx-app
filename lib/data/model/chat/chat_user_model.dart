@@ -1,6 +1,4 @@
-
-
-import 'package:eClassify/data/model/seller_ratings_model.dart';
+import 'package:eBarterx/data/model/seller_ratings_model.dart';
 
 class ChatUser {
   int? id;

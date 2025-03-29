@@ -1,6 +1,6 @@
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/safety_tips_model.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/safety_tips_model.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class SafetyTipsRepository {
   Future<DataOutput<SafetyTipsModel>> fetchTipsList() async {

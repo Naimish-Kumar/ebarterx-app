@@ -1,6 +1,6 @@
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/report_item/reason_model.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/report_item/reason_model.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class ReportItemRepository {
   Future<DataOutput<ReportReason>> fetchReportReasonsList() async {

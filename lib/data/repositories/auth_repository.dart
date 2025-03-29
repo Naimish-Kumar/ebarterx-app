@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:eClassify/utils/api.dart';
-import 'package:eClassify/utils/constant.dart';
+import 'package:eBarterx/utils/api.dart';
+import 'package:eBarterx/utils/constant.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthRepository {
@@ -26,7 +26,6 @@ class AuthRepository {
       if (email != null) Api.email: email,
       if (name != null) Api.name: name,
       if (countryCode != null) Api.countryCode: countryCode,
-
     };
 
     Map<String, dynamic> response = await Api.post(

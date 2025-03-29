@@ -1,6 +1,6 @@
-﻿import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/seller_ratings_model.dart';
-import 'package:eClassify/utils/api.dart';
+﻿import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/seller_ratings_model.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class SellerRatingsRepository {
   Future<DataOutput<UserRatings>> fetchSellerRatingsAllRatings(
@@ -11,14 +11,12 @@ class SellerRatingsRepository {
       Map<String, dynamic> response =
           await Api.get(url: Api.getSellerApi, queryParameters: parameters);
 
-
       SellerRatingsModel sellerRatingsModel =
           SellerRatingsModel.fromJson(response["data"]);
 
       int totalRatings = sellerRatingsModel.ratings?.total ?? 0;
       List<UserRatings> userRatings =
           sellerRatingsModel.ratings?.userRatings ?? [];
-
 
       var seller = sellerRatingsModel.seller;
 

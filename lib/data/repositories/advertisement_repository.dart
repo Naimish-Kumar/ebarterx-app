@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class AdvertisementRepository {
   Future<Map<String, dynamic>> create({

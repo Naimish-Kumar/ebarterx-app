@@ -1,6 +1,4 @@
-
-
-import 'package:eClassify/data/repositories/auth_repository.dart';
+import 'package:eBarterx/data/repositories/auth_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class DeleteUserState {}

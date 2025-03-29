@@ -1,10 +1,10 @@
-import 'package:eClassify/ui/theme/theme.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
 
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/ui/screens/widgets/youtube_player_widget.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/ui/screens/widgets/youtube_player_widget.dart';
 
 class VideoViewScreen extends StatelessWidget {
   final String videoUrl;

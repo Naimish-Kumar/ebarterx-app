@@ -1,4 +1,4 @@
-import 'package:eClassify/data/repositories/advertisement_repository.dart';
+import 'package:eBarterx/data/repositories/advertisement_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class GetPaymentIntentState {}

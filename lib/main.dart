@@ -1,20 +1,19 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:eClassify/app/app.dart';
-import 'package:eClassify/app/app_localization.dart';
-import 'package:eClassify/app/app_theme.dart';
-import 'package:eClassify/app/register_cubits.dart';
-import 'package:eClassify/app/routes.dart';
-import 'package:eClassify/data/cubits/system/app_theme_cubit.dart';
-import 'package:eClassify/data/cubits/system/language_cubit.dart';
-import 'package:eClassify/ui/screens/chat/chat_audio/globals.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/hive_utils.dart';
-import 'package:eClassify/utils/notification/notification_service.dart';
+import 'package:eBarterx/app/app.dart';
+import 'package:eBarterx/app/app_localization.dart';
+import 'package:eBarterx/app/app_theme.dart';
+import 'package:eBarterx/app/register_cubits.dart';
+import 'package:eBarterx/app/routes.dart';
+import 'package:eBarterx/data/cubits/system/app_theme_cubit.dart';
+import 'package:eBarterx/data/cubits/system/language_cubit.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/globals.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
+import 'package:eBarterx/utils/notification/notification_service.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 
 void main() => initApp();
 
@@ -67,14 +66,11 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-
     AppTheme currentTheme = context.watch<AppThemeCubit>().state.appTheme;
     return BlocBuilder<LanguageCubit, LanguageState>(
       builder: (context, languageState) {
         return MaterialApp(
-
           initialRoute: Routes.splash,
-
           navigatorKey: Constant.navigatorKey,
           title: Constant.appName,
           debugShowCheckedModeBanner: false,
@@ -94,14 +90,12 @@ class _AppState extends State<App> {
             }
             return MediaQuery(
               data: MediaQuery.of(context).copyWith(
-                textScaler: const TextScaler.linear(
-                    1.0),
+                textScaler: const TextScaler.linear(1.0),
               ),
               child: Directionality(
                 textDirection: direction,
                 child: DevicePreview(
                   enabled: false,
-
                   builder: (context) {
                     return child!;
                   },

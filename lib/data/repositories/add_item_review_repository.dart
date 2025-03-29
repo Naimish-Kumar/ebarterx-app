@@ -1,4 +1,4 @@
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/utils/api.dart';
 
 class AddItemReviewRepository {
   Future<Map> addItemReview(

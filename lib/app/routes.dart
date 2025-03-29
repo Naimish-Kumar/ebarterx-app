@@ -1,57 +1,57 @@
-import 'package:eClassify/ui/screens/ad_details_screen.dart';
-import 'package:eClassify/ui/screens/advertisement/my_advertisment_screen.dart';
-import 'package:eClassify/ui/screens/auth/login/forgot_password.dart';
-import 'package:eClassify/ui/screens/auth/login/login_screen.dart';
-import 'package:eClassify/ui/screens/auth/sign_up/mobile_signup_screen.dart';
-import 'package:eClassify/ui/screens/auth/sign_up/signup_main_screen.dart';
-import 'package:eClassify/ui/screens/auth/sign_up/signup_screen.dart';
-import 'package:eClassify/ui/screens/blogs/blog_details.dart';
-import 'package:eClassify/ui/screens/blogs/blogs_screen.dart';
-import 'package:eClassify/ui/screens/chat/blocked_user_list_screen.dart';
-import 'package:eClassify/ui/screens/faqs_screen.dart';
-import 'package:eClassify/ui/screens/favorite_screen.dart';
-import 'package:eClassify/ui/screens/filter_screen.dart';
-import 'package:eClassify/ui/screens/home/category_list.dart';
-import 'package:eClassify/ui/screens/home/change_language_screen.dart';
-import 'package:eClassify/ui/screens/home/search_screen.dart';
-import 'package:eClassify/ui/screens/home/widgets/categoryFilterScreen.dart';
-import 'package:eClassify/ui/screens/home/widgets/posted_since_filter.dart';
-import 'package:eClassify/ui/screens/home/widgets/sub_category_filter.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/add_item_details.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/confirm_location_screen.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/more_details.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/select_category.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/widgets/pdf_viewer.dart';
-import 'package:eClassify/ui/screens/item/add_item_screen/widgets/success_item_screen.dart';
-import 'package:eClassify/ui/screens/item/items_list.dart';
-import 'package:eClassify/ui/screens/item/my_items_screen.dart';
-import 'package:eClassify/ui/screens/item/view_all_screen.dart';
-import 'package:eClassify/ui/screens/location/areas_screen.dart';
-import 'package:eClassify/ui/screens/location/cities_screen.dart';
-import 'package:eClassify/ui/screens/location/countries_screen.dart';
-import 'package:eClassify/ui/screens/location/nearby_location.dart';
-import 'package:eClassify/ui/screens/location/states_screen.dart';
-import 'package:eClassify/ui/screens/location_permission_screen.dart';
-import 'package:eClassify/ui/screens/main_activity.dart';
-import 'package:eClassify/ui/screens/my_review_screen.dart';
-import 'package:eClassify/ui/screens/onboarding/onboarding_screen.dart';
-import 'package:eClassify/ui/screens/seller/seller_intro_verification.dart';
-import 'package:eClassify/ui/screens/seller/seller_profile.dart';
-import 'package:eClassify/ui/screens/seller/seller_verification.dart';
-import 'package:eClassify/ui/screens/seller/seller_verification_complete.dart';
-import 'package:eClassify/ui/screens/settings/contact_us.dart';
-import 'package:eClassify/ui/screens/settings/notification_detail.dart';
-import 'package:eClassify/ui/screens/settings/notifications.dart';
-import 'package:eClassify/ui/screens/settings/profile_setting.dart';
-import 'package:eClassify/ui/screens/sold_out_bought_screen.dart';
-import 'package:eClassify/ui/screens/splash_screen.dart';
-import 'package:eClassify/ui/screens/sub_category/sub_category_screen.dart';
-import 'package:eClassify/ui/screens/subscription/packages_list.dart';
-import 'package:eClassify/ui/screens/subscription/transaction_history_screen.dart';
-import 'package:eClassify/ui/screens/user_profile/edit_profile.dart';
-import 'package:eClassify/ui/screens/widgets/animated_routes/blur_page_route.dart';
-import 'package:eClassify/ui/screens/widgets/maintenance_mode.dart';
-import 'package:eClassify/utils/constant.dart';
+import 'package:eBarterx/ui/screens/ad_details_screen.dart';
+import 'package:eBarterx/ui/screens/advertisement/my_advertisment_screen.dart';
+import 'package:eBarterx/ui/screens/auth/login/forgot_password.dart';
+import 'package:eBarterx/ui/screens/auth/login/login_screen.dart';
+import 'package:eBarterx/ui/screens/auth/sign_up/mobile_signup_screen.dart';
+import 'package:eBarterx/ui/screens/auth/sign_up/signup_main_screen.dart';
+import 'package:eBarterx/ui/screens/auth/sign_up/signup_screen.dart';
+import 'package:eBarterx/ui/screens/blogs/blog_details.dart';
+import 'package:eBarterx/ui/screens/blogs/blogs_screen.dart';
+import 'package:eBarterx/ui/screens/chat/blocked_user_list_screen.dart';
+import 'package:eBarterx/ui/screens/faqs_screen.dart';
+import 'package:eBarterx/ui/screens/favorite_screen.dart';
+import 'package:eBarterx/ui/screens/filter_screen.dart';
+import 'package:eBarterx/ui/screens/home/category_list.dart';
+import 'package:eBarterx/ui/screens/home/change_language_screen.dart';
+import 'package:eBarterx/ui/screens/home/search_screen.dart';
+import 'package:eBarterx/ui/screens/home/widgets/categoryFilterScreen.dart';
+import 'package:eBarterx/ui/screens/home/widgets/posted_since_filter.dart';
+import 'package:eBarterx/ui/screens/home/widgets/sub_category_filter.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/add_item_details.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/confirm_location_screen.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/more_details.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/select_category.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/widgets/pdf_viewer.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/widgets/success_item_screen.dart';
+import 'package:eBarterx/ui/screens/item/items_list.dart';
+import 'package:eBarterx/ui/screens/item/my_items_screen.dart';
+import 'package:eBarterx/ui/screens/item/view_all_screen.dart';
+import 'package:eBarterx/ui/screens/location/areas_screen.dart';
+import 'package:eBarterx/ui/screens/location/cities_screen.dart';
+import 'package:eBarterx/ui/screens/location/countries_screen.dart';
+import 'package:eBarterx/ui/screens/location/nearby_location.dart';
+import 'package:eBarterx/ui/screens/location/states_screen.dart';
+import 'package:eBarterx/ui/screens/location_permission_screen.dart';
+import 'package:eBarterx/ui/screens/main_activity.dart';
+import 'package:eBarterx/ui/screens/my_review_screen.dart';
+import 'package:eBarterx/ui/screens/onboarding/onboarding_screen.dart';
+import 'package:eBarterx/ui/screens/seller/seller_intro_verification.dart';
+import 'package:eBarterx/ui/screens/seller/seller_profile.dart';
+import 'package:eBarterx/ui/screens/seller/seller_verification.dart';
+import 'package:eBarterx/ui/screens/seller/seller_verification_complete.dart';
+import 'package:eBarterx/ui/screens/settings/contact_us.dart';
+import 'package:eBarterx/ui/screens/settings/notification_detail.dart';
+import 'package:eBarterx/ui/screens/settings/notifications.dart';
+import 'package:eBarterx/ui/screens/settings/profile_setting.dart';
+import 'package:eBarterx/ui/screens/sold_out_bought_screen.dart';
+import 'package:eBarterx/ui/screens/splash_screen.dart';
+import 'package:eBarterx/ui/screens/sub_category/sub_category_screen.dart';
+import 'package:eBarterx/ui/screens/subscription/packages_list.dart';
+import 'package:eBarterx/ui/screens/subscription/transaction_history_screen.dart';
+import 'package:eBarterx/ui/screens/user_profile/edit_profile.dart';
+import 'package:eBarterx/ui/screens/widgets/animated_routes/blur_page_route.dart';
+import 'package:eBarterx/ui/screens/widgets/maintenance_mode.dart';
+import 'package:eBarterx/utils/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -117,14 +117,12 @@ class Routes {
   static const sellerVerificationComplteScreen =
       '/sellerVerificationComplteScreen';
 
-
   static const selectItemTypeScreen = '/selectItemType';
   static const addItemDetailsScreen = '/addItemDetailsScreen';
   static const setItemParametersScreen = '/setItemParametersScreen';
   static const selectOutdoorFacility = '/selectOutdoorFacility';
   static const adDetailsScreen = '/adDetailsScreen';
   static const successItemScreen = '/successItemScreen';
-
 
   static const selectCategoryScreen = '/selectCategoryScreen';
   static const selectNestedCategoryScreen = '/selectNestedCategoryScreen';
@@ -134,7 +132,6 @@ class Routes {
   static const sectionWiseItemsScreen = '/sectionWiseItemsScreen';
   static const blockedUserListScreen = '/blockedUserListScreen';
   static const payStackWebViewScreen = '/payStackWebViewScreen';
-
 
   static const playground = 'playground';
 
@@ -156,7 +153,6 @@ class Routes {
                   itemSlug: itemSlug,
                 )));
       } else {
-
         if (currentRoute == adDetailsScreen) {
           Constant.navigatorKey.currentState?.pop();
         }
@@ -164,7 +160,6 @@ class Routes {
             RouteSettings(arguments: {"slug": itemSlug}));
       }
     }
-
 
     switch (routeSettings.name) {
       case splash:

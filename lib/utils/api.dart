@@ -1,17 +1,17 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:eClassify/data/cubits/chat/blocked_users_list_cubit.dart';
-import 'package:eClassify/data/cubits/chat/get_buyer_chat_users_cubit.dart';
-import 'package:eClassify/data/cubits/favorite/favorite_cubit.dart';
-import 'package:eClassify/data/cubits/report/update_report_items_list_cubit.dart';
-import 'package:eClassify/data/cubits/system/user_details.dart';
-import 'package:eClassify/utils/constant.dart';
-import 'package:eClassify/utils/error_filter.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/helper_utils.dart';
-import 'package:eClassify/utils/hive_utils.dart';
-import 'package:eClassify/utils/network_request_interseptor.dart';
+import 'package:eBarterx/data/cubits/chat/blocked_users_list_cubit.dart';
+import 'package:eBarterx/data/cubits/chat/get_buyer_chat_users_cubit.dart';
+import 'package:eBarterx/data/cubits/favorite/favorite_cubit.dart';
+import 'package:eBarterx/data/cubits/report/update_report_items_list_cubit.dart';
+import 'package:eBarterx/data/cubits/system/user_details.dart';
+import 'package:eBarterx/utils/constant.dart';
+import 'package:eBarterx/utils/error_filter.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
+import 'package:eBarterx/utils/hive_utils.dart';
+import 'package:eBarterx/utils/network_request_interseptor.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ApiException implements Exception {
@@ -50,7 +50,6 @@ class Api {
     }
   }
 
-
   static const String _placeApiBaseUrl =
       "https://maps.googleapis.com/maps/api/place/";
   static String placeApiKey = "key";
@@ -60,9 +59,7 @@ class Api {
   static String placeAPI = "${_placeApiBaseUrl}autocomplete/json";
   static String placeApiDetails = "${_placeApiBaseUrl}details/json";
 
-
   static String stripeIntentAPI = "https://api.stripe.com/v1/payment_intents";
-
 
   static String loginApi = "user-signup";
   static String updateProfileApi = "update-profile";
@@ -117,7 +114,6 @@ class Api {
   static String unBlockUserApi = "unblock-user";
   static String blockedUsersListApi = "blocked-users";
   static String getPaymentDetailsApi = "payment-transactions";
-
 
   static String userPurchasePackageApi = "user-purchase-package";
   static String deleteInquiryApi = "delete-inquiry";
@@ -252,17 +248,14 @@ class Api {
 
         parameter.forEach((key, value) {
           if (value is File) {
-
             formMap[key] = MultipartFile.fromFileSync(value.path,
                 filename: value.path.split('/').last);
           } else if (value is List<File>) {
-
             formMap[key] = value
                 .map((file) => MultipartFile.fromFileSync(file.path,
                     filename: file.path.split('/').last))
                 .toList();
           } else {
-
             formMap[key] = value;
           }
         });
@@ -343,15 +336,13 @@ class Api {
       Map<String, dynamic>? queryParameters,
       bool? useBaseUrl}) async {
     try {
-
       final Dio dio = Dio();
       dio.interceptors.add(NetworkRequestInterceptor());
 
-      final response =
-          await dio.delete(((useBaseUrl ?? true) ? Constant.baseUrl : "") + url,
-              queryParameters: queryParameters,
-              options:
-                  Options(headers: headers()) );
+      final response = await dio.delete(
+          ((useBaseUrl ?? true) ? Constant.baseUrl : "") + url,
+          queryParameters: queryParameters,
+          options: Options(headers: headers()));
 
       if (response.data['error'] == true) {
         throw ApiException(response.data['message'].toString());
@@ -360,7 +351,6 @@ class Api {
     } on DioException catch (e) {
       if (e.response?.statusCode == 401) {
         userExpired();
-
       }
       if (e.response?.statusCode == 503) {
         throw "server-not-available";
@@ -381,7 +371,6 @@ class Api {
       Map<String, dynamic>? queryParameters,
       bool? useBaseUrl}) async {
     try {
-
       final Dio dio = Dio();
       dio.interceptors.add(NetworkRequestInterceptor());
 
@@ -391,7 +380,6 @@ class Api {
           options: Options(headers: headers()));
 
       if (response.data['error'] == true) {
-
         throw ApiException(response.data['message'].toString());
       }
       return Map.from(response.data);

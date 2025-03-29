@@ -1,6 +1,6 @@
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/seller_ratings_model.dart';
-import 'package:eClassify/data/repositories/seller/seller_ratings_repository.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/seller_ratings_model.dart';
+import 'package:eBarterx/data/repositories/seller/seller_ratings_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FetchSellerRatingsState {}
@@ -110,10 +110,7 @@ class FetchSellerRatingsCubit extends Cubit<FetchSellerRatingsState> {
     }
   }
 
-
-
   void updateIsExpanded(int index) {
-
     if (state is FetchSellerRatingsSuccess) {
       List<UserRatings> ratingsList =
           (state as FetchSellerRatingsSuccess).ratings;

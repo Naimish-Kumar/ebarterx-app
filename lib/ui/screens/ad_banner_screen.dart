@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:eClassify/utils/constant.dart';
+import 'package:eBarterx/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 

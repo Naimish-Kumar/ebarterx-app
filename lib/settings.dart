@@ -1,4 +1,4 @@
-import 'package:eClassify/utils/helper_utils.dart';
+import 'package:eBarterx/utils/helper_utils.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class PaymentGateway {
@@ -23,29 +23,23 @@ class AppSettings {
   static const String androidPackageName = 'com.acrocoder.ebarterx.app';
   static const String shareAppText = "Share this App";
 
-
-  static const String hostUrl = "https://crm.acrocoder.site";
-
+  static const String hostUrl = "https://admin.ebarterx.com";
 
   ///API Setting
 
   static const int apiDataLoadLimit = 20;
   static const int maxCategoryShowLengthInHomeScreen = 5;
 
-
-  static final String baseUrl =
-      "${HelperUtils.checkHost(hostUrl)}api/";
+  static final String baseUrl = "${HelperUtils.checkHost(hostUrl)}api/";
 
   static const int hiddenAPIProcessDelay = 1;
 
   ///Set type here
   static const DeepLinkType deepLinkingType = DeepLinkType.native;
 
-
   static const String shareNavigationWebUrl = "com.acrocoder.ebarterx.app";
 
-  static const MapType googleMapType =
-      MapType.normal;
+  static const MapType googleMapType = MapType.normal;
 
   static const int otpResendSecond = 60 * 2;
   static const int otpTimeOutSecond = 60 * 2;
@@ -53,23 +47,17 @@ class AppSettings {
   static const String defaultCountryCode = "91";
   static const bool disableCountrySelection = false;
 
-
   static const String successLoadingLottieFile = "loading_success.json";
   static const String successCheckLottieFile = "success_check.json";
-  static const String progressLottieFileWhite =
-      "loading_white.json";
+  static const String progressLottieFileWhite = "loading_white.json";
 
   static const String maintenanceModeLottieFile = "maintenancemode.json";
 
-  static const bool useLottieProgress =
-      true;
-
+  static const bool useLottieProgress = true;
 
   static const String notificationChannel = "basic_channel";
   static int uploadImageQuality = 50;
-  static const Set additionalRTLlanguages =
-      {};
-
+  static const Set additionalRTLlanguages = {};
 
   static const String riveAnimationFile = "rive_animation.riv";
 

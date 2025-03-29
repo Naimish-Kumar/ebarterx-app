@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:eClassify/data/model/chat/chat_user_model.dart';
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/ui/screens/chat/chat_audio/widgets/chat_widget.dart';
-import 'package:eClassify/utils/api.dart';
+import 'package:eBarterx/data/model/chat/chat_user_model.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/ui/screens/chat/chat_audio/widgets/chat_widget.dart';
+import 'package:eBarterx/utils/api.dart';
 import 'package:flutter/material.dart';
 
 class ChatRepository {
@@ -90,7 +90,6 @@ class ChatRepository {
     if (message != "") {
       parameters['message'] = message;
     }
-
 
     Map<String, dynamic> map =
         await Api.post(url: Api.sendMessageApi, parameter: parameters);

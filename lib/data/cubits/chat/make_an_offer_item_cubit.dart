@@ -1,4 +1,4 @@
-import 'package:eClassify/data/repositories/item/item_repository.dart';
+import 'package:eBarterx/data/repositories/item/item_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class MakeAnOfferItemState {}
@@ -11,7 +11,6 @@ class MakeAnOfferItemSuccess extends MakeAnOfferItemState {
   final String message;
   final String from;
   final dynamic data;
-
 
   MakeAnOfferItemSuccess(
     this.message,

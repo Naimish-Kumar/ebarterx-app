@@ -1,10 +1,10 @@
-import 'package:eClassify/ui/screens/item/add_item_screen/custom_filed_structure/custom_field.dart';
-import 'package:eClassify/ui/screens/widgets/dynamic_field.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
-import 'package:eClassify/utils/validator.dart';
+import 'package:eBarterx/ui/screens/item/add_item_screen/custom_filed_structure/custom_field.dart';
+import 'package:eBarterx/ui/screens/widgets/dynamic_field.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
+import 'package:eBarterx/utils/validator.dart';
 import 'package:flutter/material.dart';
 
 class CustomCheckboxField extends CustomField {

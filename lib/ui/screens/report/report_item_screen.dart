@@ -1,10 +1,10 @@
-import 'package:eClassify/data/cubits/report/fetch_item_report_reason_list.dart';
-import 'package:eClassify/data/cubits/report/item_report_cubit.dart';
-import 'package:eClassify/data/model/report_item/reason_model.dart';
-import 'package:eClassify/ui/theme/theme.dart';
-import 'package:eClassify/utils/custom_text.dart';
-import 'package:eClassify/utils/extensions/extensions.dart';
-import 'package:eClassify/utils/ui_utils.dart';
+import 'package:eBarterx/data/cubits/report/fetch_item_report_reason_list.dart';
+import 'package:eBarterx/data/cubits/report/item_report_cubit.dart';
+import 'package:eBarterx/data/model/report_item/reason_model.dart';
+import 'package:eBarterx/ui/theme/theme.dart';
+import 'package:eBarterx/utils/custom_text.dart';
+import 'package:eBarterx/utils/extensions/extensions.dart';
+import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

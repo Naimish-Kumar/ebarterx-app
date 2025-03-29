@@ -1,7 +1,7 @@
-import 'package:eClassify/data/model/data_output.dart';
-import 'package:eClassify/data/model/report_item/reason_model.dart';
-import 'package:eClassify/data/repositories/report_item_repository.dart';
-import 'package:eClassify/settings.dart';
+import 'package:eBarterx/data/model/data_output.dart';
+import 'package:eBarterx/data/model/report_item/reason_model.dart';
+import 'package:eBarterx/data/repositories/report_item_repository.dart';
+import 'package:eBarterx/settings.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FetchItemReportReasonsListState {}
