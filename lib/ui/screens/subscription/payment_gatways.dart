@@ -72,7 +72,9 @@ class PaymentGateways {
       body = base64Data;
 
       PhonePePaymentSdk.startTransaction(
-              body, callBackUrl, checksums, Constant.androidPackageName)
+              body, 
+              // callBackUrl, checksums, 
+              Constant.androidPackageName)
           .then((response) async {
         print("phonepe response***$response");
         print("phone status***${response != null}");

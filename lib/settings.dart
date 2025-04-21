@@ -39,7 +39,7 @@ class AppSettings {
 
   static const String shareNavigationWebUrl = "com.acrocoder.ebarterx.app";
 
-  static const MapType googleMapType = MapType.normal;
+  static const MapType googleMapType = MapType.satellite;
 
   static const int otpResendSecond = 60 * 2;
   static const int otpTimeOutSecond = 60 * 2;

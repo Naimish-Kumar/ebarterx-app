@@ -77,7 +77,6 @@ class HomeScreenState extends State<HomeScreen>
     addPageScrollListener();
     notificationPermissionChecker();
     LocalAwesomeNotification().init(context);
-    ///////////////////////////////////////
     NotificationService.init(context);
     context.read<SliderCubit>().fetchSlider(
           context,
@@ -103,7 +102,7 @@ class HomeScreenState extends State<HomeScreen>
 
     if (HiveUtils.isUserAuthenticated()) {
       context.read<FavoriteCubit>().getFavorite();
-      //fetchApiKeys();
+      fetchApiKeys();
       context.read<GetBuyerChatListCubit>().fetch();
       context.read<BlockedUsersListCubit>().blockedUsersList();
     }

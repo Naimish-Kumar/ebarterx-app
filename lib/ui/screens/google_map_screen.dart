@@ -29,20 +29,7 @@ class GoogleMapScreen extends StatefulWidget {
 }
 
 class _GoogleMapScreenState extends State<GoogleMapScreen> {
-  bool isGoogleMapVisible = false;
-
-  @override
-  void initState() {
-    Future.delayed(
-      const Duration(milliseconds: 500),
-      () {
-        isGoogleMapVisible = true;
-        setState(() {});
-      },
-    );
-
-    super.initState();
-  }
+  bool isGoogleMapVisible = true;
 
   @override
   Widget build(BuildContext context) {

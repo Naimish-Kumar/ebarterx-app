@@ -8,6 +8,7 @@ class SystemRepository {
       queryParameters: parameters,
       url: Api.getSystemSettingsApi,
     );
+    print("response $response");
 
     return response;
   }

@@ -38,10 +38,11 @@ class EntryPointState extends State<EntryPoint> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: RegisterCubits().providers,
-        child: Builder(builder: (BuildContext context) {
-          return const App();
-        }));
+      providers: RegisterCubits().providers,
+      child: Builder(builder: (BuildContext context) {
+        return const App();
+      }),
+    );
   }
 }
 

@@ -42,10 +42,11 @@ class CountriesScreen extends StatefulWidget {
 
     return BlurredRouter(
       builder: (context) => BlocProvider(
-          create: (context) => FetchCountriesCubit(),
-          child: CountriesScreen(
-            from: arguments!['from'] ?? "",
-          )),
+        create: (context) => FetchCountriesCubit(),
+        child: CountriesScreen(
+          from: arguments!['from'] ?? "",
+        ),
+      ),
     );
   }
 
@@ -123,12 +124,10 @@ class CountriesScreenState extends State<CountriesScreen>
     setState(() {});
   }
 
-//This will create delay so we don't face rapid api call
   void searchCallAfterDelay() {
     _searchDelay = Timer(const Duration(milliseconds: 500), itemSearch);
   }
 
-  ///This will call api after some delay
   void itemSearch() {
     // if (searchController.text.isNotEmpty) {
     if (previousSearchQuery != searchController.text) {

@@ -1,22 +1,17 @@
 import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 
-///Light Theme Colors
-///This color format is different, isn't it? .You can use hex colors here also but you have to remove '#' symbol and add 0xff instead.
 const Color primaryColor_ = Color(0xFFF6F5FA);
 const Color secondaryColor_ = Color(0xFFFFFFFF);
-const Color territoryColor_ = Color(0xFF00B2CA);
+const Color territoryColor_ = Color(0xFF097BBD);
 const Color forthColor_ = Color(0xffFA6E53);
 const Color _backgroundColor = primaryColor_; //here you can change if you need
 const Color textDarkColor = Color(0xFF000000);
 Color lightTextColor = const Color(0xFF000000).withOpacity(0.5);
 Color widgetsBorderColorLight = const Color(0xffEEEEEE).withOpacity(0.6);
-//Color senderChatColor = const Color.fromARGB(255, 233, 233, 233).withValues(22);
-
-///Dark Theme Colors
 Color primaryColorDark = const Color(0xff121212);
 Color secondaryColorDark = const Color(0xff1C1C1C).withOpacity(0.9);
-const Color territoryColorDark = Color(0xff00B2CA);
+const Color territoryColorDark = Color(0xFF097BBD);
 Color deactivateColorLight = const Color(0xff7F7F7F);
 
 const Color forthColorDark = Color(0xffFA6E53);
@@ -25,10 +20,9 @@ const Color textColorDarkTheme = Color(0xffFDFDFD);
 Color lightTextColorDarkTheme = const Color(0xffFDFDFD).withOpacity(0.3);
 Color widgetsBorderColorDark = const Color(0x1aFDFDFD);
 
-///Messages Color
 const Color errorMessageColor =
     Color.fromARGB(255, 166, 4, 4); // Color(0xffeb5479)
-const Color successMessageColor = Color(0xff00B2CA);
+const Color successMessageColor = Color(0xFF097BBD);
 const Color warningMessageColor = Color(0xFFC2AF6F);
 
 //status button color
@@ -40,8 +34,6 @@ const Color activateButtonColor = Color(0xFF02AD11);
 //Button text color
 const Color buttonTextColor = Colors.white;
 
-///Advance
-//Theme settings
 extension ColorPrefs on ColorScheme {
   Color get primaryColor => _getColor(brightness,
       lightColor: primaryColor_, darkColor: primaryColorDark);
@@ -97,18 +89,11 @@ extension ColorPrefs on ColorScheme {
       : Colors.white.withOpacity(0.7);
 }
 
-// 10pt: Smaller
-// 12pt: Small
-// 16pt: Large
-// 18pt: Larger
-// 24pt: Extra large
+
 extension TextThemeForFont on TextTheme {
   Font get font => Font();
 }
 
-/// i made this to access font easily from theme like, Theme.of(context).textTheme.font.small
-/// So what is difference here?? in Theme.of(context).textTheme.small and Theme.of(context).textTheme.font.small
-/// We use separate class because There will be an execution on BuildContext in [Utils/Extensions/lib] folder so further explanation is there. you can check
 class Font {
   ///10
   double get smaller => 10;

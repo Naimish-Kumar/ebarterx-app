@@ -7,25 +7,17 @@ import 'package:eBarterx/data/cubits/system/fetch_language_cubit.dart';
 import 'package:eBarterx/data/cubits/system/fetch_system_settings_cubit.dart';
 import 'package:eBarterx/data/cubits/system/language_cubit.dart';
 import 'package:eBarterx/data/model/system_settings_model.dart';
-import 'package:eBarterx/settings.dart';
 import 'package:eBarterx/ui/screens/widgets/errors/no_internet.dart';
-import 'package:eBarterx/ui/theme/theme.dart';
-import 'package:eBarterx/utils/app_icon.dart';
 import 'package:eBarterx/utils/constant.dart';
 import 'package:eBarterx/utils/custom_text.dart';
 import 'package:eBarterx/utils/extensions/extensions.dart';
 import 'package:eBarterx/utils/hive_utils.dart';
-import 'package:eBarterx/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({this.itemSlug, super.key});
-
-  //Used when the app is terminated and then is opened using deep link, in which case
-  //the main route needs to be added to navigation stack, previously it directly used to
-  //push adDetails route.
   final String? itemSlug;
   @override
   SplashScreenState createState() => SplashScreenState();
@@ -41,7 +33,7 @@ class SplashScreenState extends State<SplashScreen>
 
   @override
   void initState() {
-    //locationPermission();
+    // locationPermission();
     super.initState();
 
     subscription = Connectivity().onConnectivityChanged.listen((result) {
@@ -195,12 +187,6 @@ class SplashScreenState extends State<SplashScreen>
                   statusBarColor: Colors.transparent,
                 ),
                 child: Scaffold(
-                  // backgroundColor: context.color.territoryColor,
-                  // bottomNavigationBar: Padding(
-                  //   padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  //   child: UiUtils.getSvg(AppIcons.companyLogo),
-                  // ),
-
                   body: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -216,26 +202,19 @@ class SplashScreenState extends State<SplashScreen>
                           ),
                         ),
                       ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(top: 10.0),
-                      //   child: Column(
-                      //     children: [
-                      //       CustomText(
-                      //         AppSettings.applicationName,
-                      //         fontSize: context.font.xxLarge,
-                      //         color: context.color.secondaryColor,
-                      //         textAlign: TextAlign.center,
-                      //         fontWeight: FontWeight.w600,
-                      //       ),
-                      //       CustomText(
-                      //         "\"${"buyAndSellAnything".translate(context)}\"",
-                      //         fontSize: context.font.smaller,
-                      //         color: context.color.secondaryColor,
-                      //         textAlign: TextAlign.center,
-                      //       )
-                      //     ],
-                      //   ),
-                      // ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Column(
+                          children: [
+                            CustomText(
+                              "\"${"buyAndSellAnything".translate(context)}\"",
+                              fontSize: context.font.normal,
+                              color: context.color.primary,
+                              textAlign: TextAlign.center,
+                            )
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),

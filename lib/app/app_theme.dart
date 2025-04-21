@@ -14,9 +14,9 @@ final appThemeData = {
       selectionHandleColor: territoryColor_,
     ),
     switchTheme: SwitchThemeData(
-      thumbColor: const MaterialStatePropertyAll(territoryColor_),
-      trackColor: MaterialStateProperty.resolveWith((states) {
-        if (states.contains(MaterialState.selected)) {
+      thumbColor: const WidgetStatePropertyAll(territoryColor_),
+      trackColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
           return territoryColor_.withOpacity(0.3);
         }
         return primaryColorDark;
@@ -41,9 +41,9 @@ final appThemeData = {
         seedColor: territoryColorDark,
         brightness: Brightness.dark),
     switchTheme: SwitchThemeData(
-        thumbColor: const MaterialStatePropertyAll(territoryColor_),
-        trackColor: MaterialStateProperty.resolveWith((states) {
-          if (states.contains(MaterialState.selected)) {
+        thumbColor: const WidgetStatePropertyAll(territoryColor_),
+        trackColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
             return territoryColor_.withOpacity(0.3);
           }
           return primaryColor_.withOpacity(0.2);

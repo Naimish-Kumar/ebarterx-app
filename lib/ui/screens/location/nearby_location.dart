@@ -114,8 +114,8 @@ class NearbyLocationScreenState extends State<NearbyLocationScreen>
   }
 
   void preFillLocationWhileEdit() async {
-    latitude = HiveUtils.getLatitude();
-    longitude = HiveUtils.getLongitude();
+    latitude = HiveUtils.getLatitude() ?? 28.620651521448004;
+    longitude = HiveUtils.getLongitude() ?? 77.40028742914544;
     if (latitude != "" &&
         latitude != null &&
         longitude != "" &&
@@ -383,7 +383,10 @@ class NearbyLocationScreenState extends State<NearbyLocationScreen>
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          children: [topWidget(), Expanded(child: bottomBar())],
+          children: [
+            topWidget(),
+            Expanded(child: bottomBar()),
+          ],
         ),
       ),
     );
@@ -406,75 +409,74 @@ class NearbyLocationScreenState extends State<NearbyLocationScreen>
                     ? Stack(
                         children: [
                           ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Container(
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: context.color.backgroundColor),
-                                  height: context.screenHeight * 0.55,
-                                  child: GoogleMap(
-                                      onCameraMove: (position) {
-                                        _cameraPosition = position;
-                                      },
-                                      onCameraIdle: () async {
-                                        if (markerMove == false) {
-                                          if (LatLng(latitude!, longitude!) ==
-                                              LatLng(
-                                                  _cameraPosition!
-                                                      .target.latitude,
-                                                  _cameraPosition!
-                                                      .target.longitude)) {
-                                          } else {
-                                            getLocationFromLatitudeLongitude();
-                                          }
-                                        }
-                                      },
-                                      initialCameraPosition: _cameraPosition!,
-                                      //onMapCreated: _onMapCreated,
-                                      circles: circles,
-                                      markers: _markers,
-                                      zoomControlsEnabled: false,
-                                      minMaxZoomPreference:
-                                          const MinMaxZoomPreference(0, 16),
-                                      compassEnabled: true,
-                                      indoorViewEnabled: true,
-                                      mapToolbarEnabled: true,
-                                      myLocationButtonEnabled: false,
-                                      mapType: MapType.normal,
-                                      myLocationEnabled: true,
-                                      onMapCreated:
-                                          (GoogleMapController controller) {
-                                        Future.delayed(const Duration(
-                                                milliseconds: 500))
-                                            .then((value) {
-                                          mapController = (controller);
-                                          mapController.animateCamera(
-                                            CameraUpdate.newCameraPosition(
-                                              _cameraPosition!,
-                                            ),
-                                          );
-                                          //preFillLocationWhileEdit();
-                                        });
-                                      },
-                                      onTap: (latLng) {
-                                        setState(() {
-                                          _markers
-                                              .clear(); // Clear existing markers
-                                          _markers.add(Marker(
-                                            markerId:
-                                                MarkerId('selectedLocation'),
-                                            position: latLng,
-                                          ));
-                                          latitude = latLng.latitude;
-                                          longitude = latLng.longitude;
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: context.color.backgroundColor),
+                              height: context.screenHeight * 0.55,
+                              child: GoogleMap(
+                                  onCameraMove: (position) {
+                                    _cameraPosition = position;
+                                  },
+                                  onCameraIdle: () async {
+                                    if (markerMove == false) {
+                                      if (LatLng(latitude!, longitude!) ==
+                                          LatLng(
+                                              _cameraPosition!.target.latitude,
+                                              _cameraPosition!
+                                                  .target.longitude)) {
+                                      } else {
+                                        getLocationFromLatitudeLongitude();
+                                      }
+                                    }
+                                  },
+                                  initialCameraPosition: _cameraPosition!,
+                                  //onMapCreated: _onMapCreated,
+                                  circles: circles,
+                                  markers: _markers,
+                                  zoomControlsEnabled: false,
+                                  minMaxZoomPreference:
+                                      const MinMaxZoomPreference(0, 16),
+                                  compassEnabled: true,
+                                  indoorViewEnabled: true,
+                                  mapToolbarEnabled: true,
+                                  myLocationButtonEnabled: false,
+                                  mapType: MapType.normal,
+                                  myLocationEnabled: true,
+                                  onMapCreated:
+                                      (GoogleMapController controller) {
+                                    Future.delayed(
+                                            const Duration(milliseconds: 500))
+                                        .then((value) {
+                                      mapController = (controller);
+                                      mapController.animateCamera(
+                                        CameraUpdate.newCameraPosition(
+                                          _cameraPosition!,
+                                        ),
+                                      );
+                                      //preFillLocationWhileEdit();
+                                    });
+                                  },
+                                  onTap: (latLng) {
+                                    setState(() {
+                                      _markers
+                                          .clear(); // Clear existing markers
+                                      _markers.add(Marker(
+                                        markerId: MarkerId('selectedLocation'),
+                                        position: latLng,
+                                      ));
+                                      latitude = latLng.latitude;
+                                      longitude = latLng.longitude;
 
-                                          getLocationFromLatitudeLongitude(
-                                              latLng: latLng);
-                                          _addCircle(
-                                              LatLng(latitude!, longitude!),
-                                              radius); // Get location details
-                                        });
-                                      }))),
+                                      getLocationFromLatitudeLongitude(
+                                          latLng: latLng);
+                                      _addCircle(LatLng(latitude!, longitude!),
+                                          radius); // Get location details
+                                    });
+                                  }),
+                            ),
+                          ),
                           if (formatedAddress != null)
                             PositionedDirectional(
                               start: 15,
@@ -653,8 +655,9 @@ class NearbyLocationScreenState extends State<NearbyLocationScreen>
           inactiveColor: context.color.textLightColor.withOpacity(0.1),
           max: double.parse(Constant.maxRadius),
           divisions: (double.parse(Constant.maxRadius) -
-                  double.parse(Constant.minRadius))
-              .toInt(),
+                      double.parse(Constant.minRadius))
+                  .toInt() +
+              1,
           label: '${radius.toInt()}\t${"km".translate(context)}',
           onChanged: (value) {
             setState(() {

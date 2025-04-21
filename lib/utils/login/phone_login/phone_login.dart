@@ -39,7 +39,9 @@ class PhoneLogin extends LoginSystem {
           ),
           phoneNumber:
               "+${(payload as PhoneLoginPayload).countryCode}${(payload as PhoneLoginPayload).phoneNumber}",
-          verificationCompleted: (PhoneAuthCredential credential) {},
+          verificationCompleted: (PhoneAuthCredential credential) {
+            
+          },
           verificationFailed: (FirebaseAuthException e) {
             emit(MFail(e));
           },

@@ -389,7 +389,6 @@ class MainActivityState extends State<MainActivity>
                     transform: Matrix4.identity()..translate(0.toDouble(), -20),
                     child: InkWell(
                       onTap: () async {
-                        //TODO:TEMP
                         UiUtils.checkUser(
                             onNotGuest: () {
                               context

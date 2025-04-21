@@ -12,7 +12,9 @@ class MOtpSendInProgress extends MLoginState {
   MOtpSendInProgress();
 }
 
-class MSuccess extends MLoginState {}
+class MSuccess extends MLoginState {
+  
+}
 
 class MFail extends MLoginState {
   final dynamic error;

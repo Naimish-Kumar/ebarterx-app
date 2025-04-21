@@ -12,7 +12,7 @@ import FirebaseMessaging
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-    GMSServices.provideAPIKey("PLACE_YOUR_IOS_MAP_API_KEY_HERE")
+    GMSServices.provideAPIKey("AIzaSyDL6vmveLaK3zRSY3cFAk2qFyLoOs_o9D4")
     GeneratedPluginRegistrant.register(with: self)
       
       SwiftAwesomeNotificationsPlugin.setPluginRegistrantCallback { registry in
