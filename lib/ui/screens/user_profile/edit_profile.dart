@@ -347,7 +347,7 @@ class UserProfileScreenState extends State<UserProfileScreen> {
             ),
           ),
           CupertinoSwitch(
-            trackColor: context.color.territoryColor,
+            inactiveTrackColor: context.color.territoryColor,
             value: isNotificationsEnabled,
             onChanged: (value) {
               isNotificationsEnabled = value;
@@ -383,7 +383,7 @@ class UserProfileScreenState extends State<UserProfileScreen> {
                 fontSize: context.font.large,
               )),
           CupertinoSwitch(
-            trackColor: context.color.territoryColor,
+            inactiveTrackColor: context.color.territoryColor,
             value: isPersonalDetailShow,
             onChanged: (value) {
               isPersonalDetailShow = value;

@@ -28,7 +28,11 @@ if (flutterVersionName == null) {
     flutterVersionName = '2.0.2'
 }
 
-
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
 
 android {
     namespace "com.acrocoder.ebarterx.app"
@@ -51,6 +55,15 @@ android {
         abortOnError false
     }
 
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -64,11 +77,9 @@ android {
         versionName flutterVersionName
     }
 
-
-
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled false
             shrinkResources false
         }
@@ -93,5 +104,3 @@ dependencies {
     implementation("androidx.emoji2:emoji2-views:$emoji2_version")
     implementation("androidx.emoji2:emoji2-views-helper:$emoji2_version")*/
 }
-
-

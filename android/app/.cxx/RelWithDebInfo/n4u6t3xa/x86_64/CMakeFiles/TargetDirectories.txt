@@ -1,0 +1,2 @@
+D:/ebarterx/ebarterx-app/android/app/.cxx/RelWithDebInfo/n4u6t3xa/x86_64/CMakeFiles/edit_cache.dir
+D:/ebarterx/ebarterx-app/android/app/.cxx/RelWithDebInfo/n4u6t3xa/x86_64/CMakeFiles/rebuild_cache.dir

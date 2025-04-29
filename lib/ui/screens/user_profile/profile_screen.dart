@@ -1068,7 +1068,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                     height: 40,
                     width: 30,
                     child: CupertinoSwitch(
-                      trackColor: context.color.territoryColor,
+                      inactiveTrackColor: context.color.territoryColor,
                       value: switchValue ?? false,
                       onChanged: (value) {
                         onTapSwitch?.call(value);

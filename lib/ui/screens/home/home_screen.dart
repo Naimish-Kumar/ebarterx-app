@@ -66,9 +66,8 @@ class HomeScreenState extends State<HomeScreen>
   bool isCategoryEmpty = false;
 
   //
-  late final ScrollController _scrollController = ScrollController();
-  final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
-      GlobalKey<RefreshIndicatorState>();
+  late final _scrollController = ScrollController();
+  final _refreshIndicatorKey = GlobalKey<RefreshIndicatorState>();
 
   @override
   void initState() {
