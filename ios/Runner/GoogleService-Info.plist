@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>645980627161-5m0u3najrrcqf8ehl16simrptsb5k3p3.apps.googleusercontent.com</string>
+	<string>120154997705-3obhp06vkhks62qj41ukk9h9vot80k7h.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.645980627161-5m0u3najrrcqf8ehl16simrptsb5k3p3</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>645980627161-d921nnt7lg2dml6oms2oick86nhfte1f.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.120154997705-3obhp06vkhks62qj41ukk9h9vot80k7h</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAf-fjSuSHSQjubfeACi-drJurpk1mKSfc</string>
+	<string>AIzaSyBY-Y1Ol94m1Wl6D4PY_FP2VfOjqR3g_kE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>645980627161</string>
+	<string>120154997705</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.acrocoder.ebarterx.app</string>
 	<key>PROJECT_ID</key>
-	<string>ebarterx</string>
+	<string>ebarterx-app22</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ebarterx.firebasestorage.app</string>
+	<string>ebarterx-app22.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:645980627161:ios:99c847711451ebd3165ec8</string>
+	<string>1:120154997705:ios:374ce0356b872e2e951e18</string>
 </dict>
 </plist>

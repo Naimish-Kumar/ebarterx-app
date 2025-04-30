@@ -50,19 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCSixWTcpZhy6Iz5aqoTheGEqhSgBCr_uY',
-    appId: '1:645980627161:android:495782659fa40460165ec8',
-    messagingSenderId: '645980627161',
-    projectId: 'ebarterx',
-    storageBucket: 'ebarterx.firebasestorage.app',
+    apiKey: 'AIzaSyCgj7edJStEDuPfgRdxAa_7tOG-z5kfVms',
+    appId: '1:120154997705:android:d11e4938e7f5e8f5951e18',
+    messagingSenderId: '120154997705',
+    projectId: 'ebarterx-app22',
+    storageBucket: 'ebarterx-app22.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAf-fjSuSHSQjubfeACi-drJurpk1mKSfc',
-    appId: '1:645980627161:ios:99c847711451ebd3165ec8',
-    messagingSenderId: '645980627161',
-    projectId: 'ebarterx',
-    storageBucket: 'ebarterx.firebasestorage.app',
+    apiKey: 'AIzaSyBY-Y1Ol94m1Wl6D4PY_FP2VfOjqR3g_kE',
+    appId: '1:120154997705:ios:374ce0356b872e2e951e18',
+    messagingSenderId: '120154997705',
+    projectId: 'ebarterx-app22',
+    storageBucket: 'ebarterx-app22.firebasestorage.app',
     iosBundleId: 'com.acrocoder.ebarterx.app',
   );
+
 }

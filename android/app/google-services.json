@@ -1,45 +1,37 @@
 {
   "project_info": {
-    "project_number": "645980627161",
-    "project_id": "ebarterx",
-    "storage_bucket": "ebarterx.firebasestorage.app"
+    "project_number": "120154997705",
+    "project_id": "ebarterx-app22",
+    "storage_bucket": "ebarterx-app22.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:645980627161:android:495782659fa40460165ec8",
+        "mobilesdk_app_id": "1:120154997705:android:d11e4938e7f5e8f5951e18",
         "android_client_info": {
           "package_name": "com.acrocoder.ebarterx.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "645980627161-d921nnt7lg2dml6oms2oick86nhfte1f.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.acrocoder.ebarterx.app",
-            "certificate_hash": "3245d9db03462defd32c56ef10baed8065bddb9b"
-          }
-        },
-        {
-          "client_id": "645980627161-qqfk1p3j01l8ntphvfg897ouiq1dhmic.apps.googleusercontent.com",
+          "client_id": "120154997705-fts3u8c7hmd2i0ab2of95rf6fug6v69p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCSixWTcpZhy6Iz5aqoTheGEqhSgBCr_uY"
+          "current_key": "AIzaSyCgj7edJStEDuPfgRdxAa_7tOG-z5kfVms"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "645980627161-qqfk1p3j01l8ntphvfg897ouiq1dhmic.apps.googleusercontent.com",
+              "client_id": "120154997705-fts3u8c7hmd2i0ab2of95rf6fug6v69p.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "645980627161-5m0u3najrrcqf8ehl16simrptsb5k3p3.apps.googleusercontent.com",
+              "client_id": "120154997705-3obhp06vkhks62qj41ukk9h9vot80k7h.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.acrocoder.ebarterx.app"

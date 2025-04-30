@@ -297,7 +297,7 @@ class NearbyLocationScreenState extends State<NearbyLocationScreen>
       HiveUtils.setLocation(
           city: formatedAddress!.city,
           state: formatedAddress!.state,
-          area: formatedAddress!.area,
+          area: formatedAddress!.area,  
           country: formatedAddress!.country,
           latitude: latitude,
           longitude: longitude,
