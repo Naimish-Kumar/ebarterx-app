@@ -10,7 +10,7 @@ class SVGEdit {
     if (node is XmlElement) {
       String? attr = node.getAttribute(attribute);
 
-      if (attr != null && attr.isNotEmpty && id == node.getAttribute("id")) {
+      if (attr!.isNotEmpty && id == node.getAttribute("id")) {
         node.setAttribute(attribute, value);
       }
       for (final child in node.children) {

@@ -91,9 +91,6 @@ class LoginScreenState extends State<LoginScreen> {
       if (state is MVerificationPending) {
         if (mounted) {
           Widgets.hideLoder(context);
-
-          // Widgets.showLoader(context);
-
           isOtpSent = true;
           setState(() {});
           if (isLoginWithMobile.value) {
@@ -126,9 +123,7 @@ class LoginScreenState extends State<LoginScreen> {
           }
         }
       }
-      if (state is MSuccess) {
-        // Widgets.hideLoder(context);
-      }
+      if (state is MSuccess) {}
     });
     getSimCountry().then((value) {
       countryCode = value.phoneCode;
@@ -197,7 +192,6 @@ class LoginScreenState extends State<LoginScreen> {
 
   void _onTapContinue() {
     if (isLoginWithMobile.value) {
-      // isOtpSent = true;
       phoneLoginPayload =
           PhoneLoginPayload(mobileController.text, countryCode!);
 
@@ -537,7 +531,7 @@ class LoginScreenState extends State<LoginScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 25.0),
+              padding: const EdgeInsets.only(top: 35.0),
               child: Align(
                 alignment: AlignmentDirectional.bottomEnd,
                 child: FittedBox(
@@ -570,6 +564,7 @@ class LoginScreenState extends State<LoginScreen> {
               "welcomeback".translate(context),
               fontSize: context.font.extraLarge,
               color: context.color.textDefaultColor,
+              fontWeight: FontWeight.w600,
             ),
             const SizedBox(
               height: 8,
@@ -658,6 +653,9 @@ class LoginScreenState extends State<LoginScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const SizedBox(
+          height: 40,
+        ),
         if (Constant.mobileAuthentication == "1" ||
             Constant.emailAuthentication == "1")
           if ((Constant.googleAuthentication == "1") ||

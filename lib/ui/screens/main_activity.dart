@@ -32,7 +32,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -318,7 +317,6 @@ class MainActivityState extends State<MainActivity>
               PageView(
                 physics: const NeverScrollableScrollPhysics(),
                 controller: pageController,
-                //onPageChanged: onItemSwipe,
                 children: pages,
               ),
               if (Constant.maintenanceMode == "1") MaintenanceMode()
@@ -385,27 +383,28 @@ class MainActivityState extends State<MainActivity>
                           arguments: <String, dynamic>{});
                     }
                   },
-                  child: Transform(
-                    transform: Matrix4.identity()..translate(0.toDouble(), -20),
-                    child: InkWell(
-                      onTap: () async {
-                        UiUtils.checkUser(
-                            onNotGuest: () {
-                              context
-                                  .read<FetchUserPackageLimitCubit>()
-                                  .fetchUserPackageLimit(
-                                      packageType: "item_listing");
-                            },
-                            context: context);
-                      },
-                      child: SizedBox(
-                        width: 53,
-                        height: 58,
-                        child: svgLoaded == false
-                            ? Container()
-                            : SvgPicture.string(
-                                svgEdit.toSVGString() ?? "",
-                              ),
+                  child: InkWell(
+                    onTap: () async {
+                      UiUtils.checkUser(
+                          onNotGuest: () {
+                            context
+                                .read<FetchUserPackageLimitCubit>()
+                                .fetchUserPackageLimit(
+                                    packageType: "item_listing");
+                          },
+                          context: context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        radius: 20,
+                        backgroundColor: Colors.blue,
+                        child: Icon(Icons.add, color: Colors.white, size: 30),
+                        // svgLoaded == false
+                        //     ? Container()
+                        //     : SvgPicture.string(
+                        //         svgEdit.toSVGString() ?? "",
+                        //       ),
                       ),
                     ),
                   )),

@@ -114,9 +114,9 @@ class AppSettings {
   }
 
   static String enabledPaymentGateway = "";
-  static String razorpayKey = "";
+  static String razorpayKey = "rzp_test_A6NcMWv4LmoA0Q";
   static int razorpayStatus = 1;
-  static String razorpayCurrency = "";
+  static String razorpayCurrency = "INR";
   static String payStackKey = "";
   static String payStackCurrency = "";
   static int payStackStatus = 1;

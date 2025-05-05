@@ -57,11 +57,8 @@ class _AppState extends State<App> {
   @override
   void initState() {
     context.read<LanguageCubit>().loadCurrentLanguage();
-
     AppTheme currentTheme = HiveUtils.getCurrentTheme();
-
     context.read<AppThemeCubit>().changeTheme(currentTheme);
-
     super.initState();
   }
 
@@ -79,7 +76,6 @@ class _AppState extends State<App> {
           theme: appThemeData[currentTheme],
           builder: (context, child) {
             TextDirection? direction;
-
             if (languageState is LanguageLoader) {
               if (languageState.language['rtl'] == true) {
                 direction = TextDirection.rtl;

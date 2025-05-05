@@ -54,7 +54,7 @@
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true"
-        >
+    >
 
         <activity
             android:name=".MainActivity"
@@ -99,10 +99,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-       <activity
-  android:name="com.yalantis.ucrop.UCropActivity"
-  android:screenOrientation="portrait"
-  android:theme="@style/Ucrop.CropTheme"/> <!--this line is updated-->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Ucrop.CropTheme" /> <!--this
+        line is updated-->
 
 
         <meta-data
@@ -125,9 +126,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
             android:value="false" />
-            
+
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyDL6vmveLaK3zRSY3cFAk2qFyLoOs_o9D4"/>
+            android:value="AIzaSyDL6vmveLaK3zRSY3cFAk2qFyLoOs_o9D4" />
 
         <!-- <property
             android:name="android.adservices.AD_SERVICES_CONFIG"

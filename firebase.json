@@ -1,1 +1,30 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"ebarterx-app22","appId":"1:120154997705:android:d11e4938e7f5e8f5951e18","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"ebarterx-app22","configurations":{"android":"1:120154997705:android:d11e4938e7f5e8f5951e18","ios":"1:120154997705:ios:374ce0356b872e2e951e18"}}},"ios":{"default":{"projectId":"ebarterx-app22","appId":"1:120154997705:ios:374ce0356b872e2e951e18","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}}}}}
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "ebarterx-app22",
+                    "appId": "1:120154997705:android:d11e4938e7f5e8f5951e18",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "ebarterx-app22",
+                    "configurations": {
+                        "android": "1:120154997705:android:d11e4938e7f5e8f5951e18",
+                        "ios": "1:120154997705:ios:374ce0356b872e2e951e18"
+                    }
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "ebarterx-app22",
+                    "appId": "1:120154997705:ios:374ce0356b872e2e951e18",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            }
+        }
+    }
+}

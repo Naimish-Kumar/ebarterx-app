@@ -235,12 +235,10 @@ class AdDetailsScreenState extends CloudState<AdDetailsScreen> {
         model.videoLink != null &&
         HelperUtils.isYoutubeVideo(model.videoLink ?? "")) {
       String? videoId = YoutubePlayer.convertUrlToId(model.videoLink!);
-      if (videoId != null) {
-        String thumbnail = YoutubePlayer.getThumbnail(videoId: videoId);
+      String thumbnail = YoutubePlayer.getThumbnail(videoId: videoId!);
 
-        youtubeVideoThumbnail = thumbnail;
-      }
-    }
+      youtubeVideoThumbnail = thumbnail;
+        }
   }
 
   void setItemClick() {
@@ -1643,7 +1641,7 @@ class AdDetailsScreenState extends CloudState<AdDetailsScreen> {
   void safetyTipsBottomSheet() {
     List<SafetyTipsModel>? tipsList =
         context.read<FetchSafetyTipsListCubit>().getList();
-    if (tipsList == null || tipsList.isEmpty) {
+    if (tipsList!.isEmpty) {
       makeOfferBottomSheet(model);
       return;
     }

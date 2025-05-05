@@ -576,12 +576,10 @@ class _FeaturedAdsSubscriptionPlansItemState
       },
     );
 
-    if (selectedGateway != null) {
-      setState(() {
-        _selectedGateway = selectedGateway;
-      });
+    setState(() {
+      _selectedGateway = selectedGateway;
+    });
     }
-  }
 }
 
 class PaymentMethodTile extends StatelessWidget {
