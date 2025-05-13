@@ -703,25 +703,25 @@ class _ProfileScreenState extends State<ProfileScreen>
                           context, Routes.languageListScreenRoute);
                     },
                   ),
-                  ValueListenableBuilder(
-                      valueListenable: isDarkTheme,
-                      builder: (context, v, c) {
-                        return customTile(
-                          context,
-                          title: "darkTheme".translate(context),
-                          svgImagePath: AppIcons.darkTheme,
-                          isSwitchBox: true,
-                          onTapSwitch: (value) {
-                            context.read<AppThemeCubit>().changeTheme(
-                                value == true ? AppTheme.dark : AppTheme.light);
-                            setState(() {
-                              isDarkTheme.value = value;
-                            });
-                          },
-                          switchValue: v,
-                          onTap: () {},
-                        );
-                      }),
+                  // ValueListenableBuilder(
+                  //     valueListenable: isDarkTheme,
+                  //     builder: (context, v, c) {
+                  //       return customTile(
+                  //         context,
+                  //         title: "darkTheme".translate(context),
+                  //         svgImagePath: AppIcons.darkTheme,
+                  //         isSwitchBox: true,
+                  //         onTapSwitch: (value) {
+                  //           context.read<AppThemeCubit>().changeTheme(
+                  //               value == true ? AppTheme.dark : AppTheme.light);
+                  //           setState(() {
+                  //             isDarkTheme.value = value;
+                  //           });
+                  //         },
+                  //         switchValue: v,
+                  //         onTap: () {},
+                  //       );
+                  //     }),
                   customTile(
                     context,
                     title: "notifications".translate(context),

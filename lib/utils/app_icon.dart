@@ -1,5 +1,3 @@
-
-
 class AppIcons {
   //
   AppIcons._();
@@ -7,12 +5,9 @@ class AppIcons {
   //
   static const String _basePath = "assets/svg/";
 
-
   static final MainIcons main = MainIcons();
 
-
   static String splashLogo = _svgPath("Logo/splashlogo");
-
 
   static String update = _svgPath("update");
   static String companyLogo = _svgPath("Logo/company_logo");

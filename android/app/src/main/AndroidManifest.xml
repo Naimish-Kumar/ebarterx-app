@@ -82,10 +82,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
+                <!-- <data
                     android:host="eclassifyweb.wrteam.me"
                     android:pathPattern="/product-details/.*"
-                    android:scheme="eclassify" />
+                    android:scheme="eclassify" /> -->
 
             </intent-filter>
 

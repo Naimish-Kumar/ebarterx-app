@@ -4,7 +4,7 @@ description: Buy and Sell with E-Barterx
 
 publish_to: 'none' 
 
-version: 1.0.0+3
+version: 1.0.0+5
 
 environment:
   sdk: ">=3.0.6 <4.0.0"

@@ -73,10 +73,11 @@ class MainActivity extends StatefulWidget {
   static Route route(RouteSettings routeSettings) {
     Map arguments = routeSettings.arguments as Map;
     return BlurredRouter(
-        builder: (_) => MainActivity(
-              from: arguments['from'] as String,
-              itemSlug: arguments['slug'] as String?,
-            ));
+      builder: (_) => MainActivity(
+        from: arguments['from'] as String,
+        itemSlug: arguments['slug'] as String?,
+      ),
+    );
   }
 }
 
@@ -89,7 +90,6 @@ class MainActivityState extends State<MainActivity>
 
   DateTime? currentBackPressTime;
 
-//This is rive file artboards and setting you can check rive package's documentation at [pub.dev]
   bool svgLoaded = false;
   bool isAddMenuOpen = false;
   int rotateAnimationDurationMs = 2000;

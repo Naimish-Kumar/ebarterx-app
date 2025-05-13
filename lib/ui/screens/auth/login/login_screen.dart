@@ -53,9 +53,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
-  late final TextEditingController emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  late final TextEditingController mobileController = TextEditingController(
+   final emailController = TextEditingController();
+  final  _passwordController = TextEditingController();
+   final  mobileController = TextEditingController(
       text: Constant.isDemoModeOn ? Constant.demoMobileNumber : '');
   bool isOtpSent = false;
   String? phone, otp, countryCode, countryName, flagEmoji;
